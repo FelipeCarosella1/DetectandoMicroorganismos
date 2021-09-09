@@ -50,7 +50,7 @@ function setup() {
   boton4 = createButton('Camara'); // crea boton de captura imagen
   boton4.position(0, 200); // posicion del boton 
   boton4.size(100);
-  boton4.mousePressed(texto); // accion al precionar el boton
+  boton4.mousePressed(camara); // accion al precionar el boton
   }
 
 function segundaPagina(){
