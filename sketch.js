@@ -13,7 +13,7 @@ function preload () {
 
 function setup() {
   createCanvas(displayWidth, displayHeight); // crea un lienzo de pantalla completa
-  background(50);  
+    background(50);  
     if (isMobileDevice()) {
         console.log("Es un dispositivo movil");
           var constraints = {
@@ -39,11 +39,17 @@ function setup() {
   et = createP("Más agua limpia más vida");
   et.position(50,-30);
   et.style("font-size","50px");
+  
+  // texto principal a desplegarce
+  textSize(16);
+  for (var i = 0; i < seaRoseLines.length; i++) {
+    fill(128+(i*10));
+    text(seaRoseLines[i], 20, 150+i*20);
+  }
   boton1 = createButton('Camara'); // crea boton de captura imagen
   boton1.position(20, 150+seaRoseLines.length*20); // posicion del boton 
   boton1.size(100);
   boton1.mousePressed(segundaPagina); // accion al precionar el boton
-  image(capture,0, 100,displayWidth,displayHeight-200); 
   }
 
 function segundaPagina(){
@@ -61,6 +67,7 @@ function segundaPagina(){
   boton3.position(0, displayHeight - 65 ); // posicion del boton
   boton3.size(100);
   boton3.mousePressed(continuar); // accion al precionar el boton
+  camara();
 }
 
 function pausa() {
@@ -82,10 +89,7 @@ function capturarimagen() {
 
 
 function camara()  {
-  // texto principal a desplegarce
-  textSize(16);
-  for (var i = 0; i < seaRoseLines.length; i++) {
-    fill(128+(i*10));
-    text(seaRoseLines[i], 20, 150+i*20);
-    }
+  while (true){
+    image(capture,0, 100,displayWidth,displayHeight-200); 
+  }
 }
