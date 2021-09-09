@@ -1,6 +1,6 @@
 var capture;
 let boton;
-let boton1;
+let boton1; 
 let boton2;
 let boton3;
 let seaRoseLines;
