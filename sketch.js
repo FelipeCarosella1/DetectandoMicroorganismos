@@ -50,15 +50,15 @@ function setup() {
 // botones para acciones
    boton = createButton('captura imagen'); // crea boton de captura imagen
   boton.position(displayWidth-(displayWidth/10)*2, displayHeight - 65 ); // posicion del boton 
-  boton.size(displayWidth/10);
+  boton.size(100);
   boton.mousePressed(capturarimagen); // accion al precionar el boton 
   boton2 = createButton('pausa'); // crea boton de captura imagen
   boton2.position(displayWidth/2-(displayWidth/10)/2, displayHeight - 65 ); // posicion del boton
-  boton2.size(displayWidth/10);
+  boton2.size(100);
   boton2.mousePressed(pausa); // accion al precionar el boton 
   boton3 = createButton('continuar'); // crea boton de captura imagen
   boton3.position(0+displayWidth/10, displayHeight - 65 ); // posicion del boton
-  boton3.size(displayWidth/10);
+  boton3.size(100);
   boton3.mousePressed(continuar); // accion al precionar el boton 
 }
 
