@@ -41,7 +41,7 @@ function setup() {
     fill(128+(i*10));
     text(seaRoseLines[i], 20, 150+i*20);
   boton = createButton('captura'); // crea boton de captura imagen
-  boton.position(20, 150+seaRoseLines.length); // posicion del boton 
+  boton.position(20, 150+seaRoseLines.length*20); // posicion del boton 
   boton.size(100);
   }
   fill(80);
