@@ -47,12 +47,12 @@ function setup() {
   boton1 = createButton('Camara'); // crea boton de captura imagen
   boton1.position(20, 150+seaRoseLines.length*20); // posicion del boton 
   boton1.size(100);
-  boton1.mousePressed(segundaPagina); // accion al precionar el boton 
+  boton1.mousePressed(segundaPagina); // accion al precionar el boton
+  boton1.hide(); 
   }
 
-function segundaPagina(boton1){
+function segundaPagina(){
 // botones para acciones
-  boton1.hide();
   boton = createButton('captura'); // crea boton de captura imagen
   boton.position(displayWidth-100*2, displayHeight - 65 ); // posicion del boton 
   boton.size(100);
