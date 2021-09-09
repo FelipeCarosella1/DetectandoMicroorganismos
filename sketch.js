@@ -36,9 +36,13 @@ function setup() {
 // texto principal a desplegarce
   background(50);
   textSize(16);
+  let term = 0
   for (var i = 0; i < seaRoseLines.length; i++) {
     fill(128+(i*10));
     text(seaRoseLines[i], 20, 150+i*20);
+  boton = createButton('captura'); // crea boton de captura imagen
+  boton.position(20, 150+seaRoseLines.length); // posicion del boton 
+  boton.size(100);
   }
   fill(80);
   rect(0,0,displayWidth,100);
@@ -48,8 +52,8 @@ function setup() {
   fill("#F0DB4F");
   rect(0,displayHeight-100,displayWidth,displayHeight);
 // botones para acciones
-   boton = createButton('captura'); // crea boton de captura imagen
-  boton.position(displayWidth-100, displayHeight - 65 ); // posicion del boton 
+  boton = createButton('captura'); // crea boton de captura imagen
+  boton.position(displayWidth-100*2, displayHeight - 65 ); // posicion del boton 
   boton.size(100);
   boton.mousePressed(capturarimagen); // accion al precionar el boton 
   boton2 = createButton('pausa'); // crea boton de captura imagen
@@ -57,7 +61,7 @@ function setup() {
   boton2.size(100);
   boton2.mousePressed(pausa); // accion al precionar el boton 
   boton3 = createButton('continuar'); // crea boton de captura imagen
-  boton3.position(0+100, displayHeight - 65 ); // posicion del boton
+  boton3.position(0, displayHeight - 65 ); // posicion del boton
   boton3.size(100);
   boton3.mousePressed(continuar); // accion al precionar el boton 
 }
