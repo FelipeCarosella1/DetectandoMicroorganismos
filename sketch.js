@@ -13,7 +13,7 @@ function preload () {
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight); // crea un lienzo de pantalla completa
+  createCanvas(displayWidth, displayHeight); // crea un lienzo de pantalla completa
   
     if (isMobileDevice()) {
         console.log("Es un dispositivo movil");
@@ -41,24 +41,24 @@ function setup() {
     text(seaRoseLines[i], 20, 150+i*20);
   }
   fill(80);
-  rect(0,0,windowWidth,100);
+  rect(0,0,displayWidth,100);
   et = createP("Más agua limpia más vida");
   et.position(50,-30);
   et.style("font-size","50px");
   fill("#F0DB4F");
-  rect(0,windowHeight-100,windowWidth,windowHeight);
-// botones para acciones 
-  boton = createButton('captura imagen'); // crea boton de captura imagen
-  boton.position(windowWidth-(windowWidth/10)*2, windowHeight - 65 ); // posicion del boton 
-  boton.size(windowWidth/10);
+  rect(0,displayHeight-100,displayWidth,displayHeight);
+// botones para acciones
+   boton = createButton('captura imagen'); // crea boton de captura imagen
+  boton.position(displayWidth-(displayWidth/10)*2, displayHeight - 65 ); // posicion del boton 
+  boton.size(displayWidth/10);
   boton.mousePressed(capturarimagen); // accion al precionar el boton 
   boton2 = createButton('pausa'); // crea boton de captura imagen
-  boton2.position(windowWidth/2-(windowWidth/10)/2, windowHeight - 65 ); // posicion del boton
-  boton2.size(windowWidth/10);
+  boton2.position(displayWidth/2-(displayWidth/10)/2, displayHeight - 65 ); // posicion del boton
+  boton2.size(displayWidth/10);
   boton2.mousePressed(pausa); // accion al precionar el boton 
   boton3 = createButton('continuar'); // crea boton de captura imagen
-  boton3.position(0+windowWidth/10, windowHeight - 65 ); // posicion del boton
-  boton3.size(windowWidth/10);
+  boton3.position(0+displayWidth/10, displayHeight - 65 ); // posicion del boton
+  boton3.size(displayWidth/10);
   boton3.mousePressed(continuar); // accion al precionar el boton 
 }
 
@@ -86,7 +86,7 @@ function draw () {
     timer --;
   }
   if (timer == 0) {
-    image(capture,0, 100,windowWidth,windowHeight-200); 
+    image(capture,0, 100,displayWidth,displayHeight-200); 
 
   }
 
