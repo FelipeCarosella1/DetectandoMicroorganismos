@@ -83,7 +83,8 @@ function capturarimagen() {
 
 
 function camara()  {
-  while (true){
+  let resultado = true
+  while (resultado == true){
     image(capture,0, 100,displayWidth,displayHeight-200); 
   }
 }
