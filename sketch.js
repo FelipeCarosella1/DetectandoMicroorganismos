@@ -58,7 +58,7 @@ function setup() {
   boton2.mousePressed(pausa); // accion al precionar el boton 
   boton3 = createButton('continuar'); // crea boton de captura imagen
   boton3.position(0+displayWidth/10, displayHeight - 65 ); // posicion del boton
-  boton3.size(200);
+  boton3.size(100);
   boton3.mousePressed(continuar); // accion al precionar el boton 
 }
 
