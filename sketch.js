@@ -65,7 +65,8 @@ function segundaPagina(boton1){
   boton3 = createButton('continuar'); // crea boton de captura imagen
   boton3.position(0, displayHeight - 65 ); // posicion del boton
   boton3.size(100);
-  boton3.mousePressed(continuar); // accion al precionar el boton 
+  boton3.mousePressed(continuar); // accion al precionar el boton
+  camara();
 }
 
 function pausa() {
@@ -86,6 +87,6 @@ function capturarimagen() {
 }
 
 
-function draw ()  {
+function camara()  {
     image(capture,0, 100,displayWidth,displayHeight-200); 
 }
