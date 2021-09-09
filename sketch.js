@@ -49,11 +49,11 @@ function setup() {
   rect(0,displayHeight-100,displayWidth,displayHeight);
 // botones para acciones
    boton = createButton('captura imagen'); // crea boton de captura imagen
-  boton.position(displayWidth-(displayWidth/10)*2, displayHeight - 65 ); // posicion del boton 
+  boton.position(displayWidth-100*2, displayHeight - 65 ); // posicion del boton 
   boton.size(100);
   boton.mousePressed(capturarimagen); // accion al precionar el boton 
   boton2 = createButton('pausa'); // crea boton de captura imagen
-  boton2.position(displayWidth/2-(displayWidth/10)/2, displayHeight - 65 ); // posicion del boton
+  boton2.position(displayWidth/2-100*2, displayHeight - 65 ); // posicion del boton
   boton2.size(100);
   boton2.mousePressed(pausa); // accion al precionar el boton 
   boton3 = createButton('continuar'); // crea boton de captura imagen
