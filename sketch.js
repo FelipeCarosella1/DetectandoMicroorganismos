@@ -16,7 +16,7 @@ function preload () {
 
 function setup() {
   createCanvas(displayWidth, displayHeight); // crea un lienzo de pantalla completa
-  background(50);  
+    background(50);  
     if (isMobileDevice()) {
         console.log("Es un dispositivo movil");
           var constraints = {
@@ -84,7 +84,9 @@ function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
 
-
+function capturarimagen() {
+     save("image"+".jpg"); // captura imagen en formato jpg
+}
 
 function texto(){
     // texto principal a desplegarce
