@@ -94,6 +94,7 @@ function texto(){
     fill(128+(i*10));
     text(seaRoseLines[i], 20, 150+i*20);
   }
+}
 function camara(){
   image(capture,0, 100,displayWidth,displayHeight-200);
   background(0);
