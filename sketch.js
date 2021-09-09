@@ -88,6 +88,7 @@ function capturarimagen() {
 
 
 function camara()  {
+  background(255);
   image(capture,0, 100,displayWidth,displayHeight-200); 
   camara()
 }
