@@ -7,19 +7,11 @@ function preload () {
 // lee el archivo de texto y coloca su contenido en una 
 // matriz de cadena con un elemento de matriz por linea en un archivo fuente
   seaRoseLines = loadStrings ('texto.txt'); // siempre debe estar en preload para que funcione
- 
 }
 
 
 function setup() {
   createCanvas(displayWidth, displayHeight); // crea un lienzo de pantalla completa
-  fill(80);
-  rect(0,0,displayWidth,100);
-  et = createP("Más agua limpia más vida");
-  et.position(50,-30);
-  et.style("font-size","50px");
-  fill("#F0DB4F");
-  rect(0,displayHeight-100,displayWidth,displayHeight);
     if (isMobileDevice()) {
         console.log("Es un dispositivo movil");
           var constraints = {
@@ -38,13 +30,20 @@ function setup() {
             capture = createCapture(VIDEO);
             capture.hide();
           }
+  fill(80);
+  rect(0,0,displayWidth,100);
+  fill("#F0DB4F");
+  rect(0,displayHeight-100,displayWidth,displayHeight);
+  et = createP("Más agua limpia más vida");
+  et.position(50,-30);
+  et.style("font-size","50px");
 // texto principal a desplegarce
   background(50);
   textSize(16);
   for (var i = 0; i < seaRoseLines.length; i++) {
     fill(128+(i*10));
     text(seaRoseLines[i], 20, 150+i*20);
-  }
+    }
   boton1 = createButton('Camara'); // crea boton de captura imagen
   boton1.position(20, 150+seaRoseLines.length*20); // posicion del boton 
   boton1.size(100);
@@ -66,7 +65,6 @@ function segundaPagina(boton1){
   boton3.position(0, displayHeight - 65 ); // posicion del boton
   boton3.size(100);
   boton3.mousePressed(continuar); // accion al precionar el boton
-  camara();
 }
 
 function pausa() {
