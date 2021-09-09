@@ -89,7 +89,7 @@ function capturarimagen() {
 
 
 function camara()  {
-  while (true){
+
     image(capture,0, 100,displayWidth,displayHeight-200); 
-  }
+
 }
