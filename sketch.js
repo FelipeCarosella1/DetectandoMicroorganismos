@@ -39,11 +39,11 @@ function setup() {
   et = createP("Más agua limpia más vida");
   et.position(50,-30);
   et.style("font-size","50px");
+  texto()
   boton1 = createButton('Camara'); // crea boton de captura imagen
   boton1.position(20, 150+seaRoseLines.length*20); // posicion del boton 
   boton1.size(100);
   boton1.mousePressed(segundaPagina); // accion al precionar el boton
-  texto()
   }
 
 function segundaPagina(){
@@ -83,9 +83,9 @@ function capturarimagen() {
 
 
 function camara()  {
-
+  while (true){
     image(capture,0, 100,displayWidth,displayHeight-200); 
-
+  }
 }
 
 function texto(){
