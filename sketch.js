@@ -4,6 +4,8 @@ let boton1;
 let boton2;
 let boton3;
 let boton4;
+let pie;
+let sup;
 let seaRoseLines;
 function preload () {
 // lee el archivo de texto y coloca su contenido en una 
@@ -14,7 +16,7 @@ function preload () {
 
 function setup() {
   createCanvas(displayWidth, displayHeight); // crea un lienzo de pantalla completa
-    background(50);  
+  background(50);  
     if (isMobileDevice()) {
         console.log("Es un dispositivo movil");
           var constraints = {
@@ -34,9 +36,9 @@ function setup() {
             capture.hide();
           }
   fill(80);
-  rect(0,0,displayWidth,100);
+  sup = rect(0,0,displayWidth,100);
   fill("#F0DB4F");
-  rect(0,displayHeight-100,displayWidth,displayHeight);
+  pie = rect(0,displayHeight-100,displayWidth,displayHeight);
   et = createP("Más agua limpia más vida");
   et.position(50,-30);
   et.style("font-size","50px");
@@ -66,7 +68,7 @@ function segundaPagina(){
   boton3.position(0, displayHeight - 65 ); // posicion del boton
   boton3.size(100);
   boton3.mousePressed(continuar); // accion al precionar el boton
-  camara();
+  image(capture,0, 100,displayWidth,displayHeight-200); 
 }
 
 function pausa() {
@@ -82,15 +84,7 @@ function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
 
-function capturarimagen() {
-     save("image"+".jpg"); // captura imagen en formato jpg
-}
 
-
-function camara()  {
-  image(capture,0, 100,displayWidth,displayHeight-200); 
-
-}
 
 function texto(){
     // texto principal a desplegarce
