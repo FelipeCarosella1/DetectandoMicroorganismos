@@ -68,9 +68,6 @@ function segundaPagina(){
   boton3.position(0, displayHeight - 65 ); // posicion del boton
   boton3.size(100);
   boton3.mousePressed(continuar); // accion al precionar el boton
-  while (true){
-    image(capture,0, 100,displayWidth,displayHeight-200); 
-  }
 }
 
 function pausa() {
@@ -97,4 +94,7 @@ function texto(){
     fill(128+(i*10));
     text(seaRoseLines[i], 20, 150+i*20);
   }
+function camara(){
+  image(capture,0, 100,displayWidth,displayHeight-200);
+}
 }
