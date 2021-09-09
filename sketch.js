@@ -96,5 +96,6 @@ function texto(){
   }
 function camara(){
   image(capture,0, 100,displayWidth,displayHeight-200);
+  background(0);
 }
 }
