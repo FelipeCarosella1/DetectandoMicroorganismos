@@ -44,7 +44,7 @@ function setup() {
   rect(0,0,displayWidth,100);
   et = createP("Más agua limpia más vida");
   et.position(50,-30);
-  et.style("font-size","50px");
+  et.style("font-size","(displayWidth/8)px");
   fill("#F0DB4F");
   rect(0,displayHeight-100,displayWidth,displayHeight);
 // botones para acciones
@@ -58,7 +58,7 @@ function setup() {
   boton2.mousePressed(pausa); // accion al precionar el boton 
   boton3 = createButton('continuar'); // crea boton de captura imagen
   boton3.position(0+displayWidth/10, displayHeight - 65 ); // posicion del boton
-  boton3.size(100);
+  boton3.size(200);
   boton3.mousePressed(continuar); // accion al precionar el boton 
 }
 
