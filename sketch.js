@@ -49,7 +49,7 @@ function setup() {
   rect(0,displayHeight-100,displayWidth,displayHeight);
 // botones para acciones
    boton = createButton('captura'); // crea boton de captura imagen
-  boton.position(displayWidth-100*2, displayHeight - 65 ); // posicion del boton 
+  boton.position(displayWidth-100, displayHeight - 65 ); // posicion del boton 
   boton.size(100);
   boton.mousePressed(capturarimagen); // accion al precionar el boton 
   boton2 = createButton('pausa'); // crea boton de captura imagen
