@@ -5,7 +5,6 @@ let boton2;
 let boton3;
 let boton4;
 let seaRoseLines;
-let resultado;
 function preload () {
 // lee el archivo de texto y coloca su contenido en una 
 // matriz de cadena con un elemento de matriz por linea en un archivo fuente
@@ -89,15 +88,12 @@ function capturarimagen() {
 
 
 function camara()  {
-  resultado = true
-  while (resultado == true){
-    image(capture,0, 100,displayWidth,displayHeight-200); 
-  }
+  image(capture,0, 100,displayWidth,displayHeight-200); 
+  camara()
 }
 
 function texto(){
     // texto principal a desplegarce
-  resultado = false
   textSize(16);
   for (var i = 0; i < seaRoseLines.length; i++) {
     fill(128+(i*10));
