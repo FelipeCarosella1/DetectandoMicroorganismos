@@ -3,7 +3,9 @@ let boton;
 let boton1; 
 let boton2;
 let boton3;
+let boton4;
 let seaRoseLines;
+let resultado;
 function preload () {
 // lee el archivo de texto y coloca su contenido en una 
 // matriz de cadena con un elemento de matriz por linea en un archivo fuente
@@ -44,6 +46,10 @@ function setup() {
   boton1.position(20, 150+seaRoseLines.length*20); // posicion del boton 
   boton1.size(100);
   boton1.mousePressed(segundaPagina); // accion al precionar el boton
+  boton4 = createButton('Camara'); // crea boton de captura imagen
+  boton4.position(0, 200); // posicion del boton 
+  boton4.size(100);
+  boton4.mousePressed(texto); // accion al precionar el boton
   }
 
 function segundaPagina(){
@@ -83,7 +89,7 @@ function capturarimagen() {
 
 
 function camara()  {
-  let resultado = true
+  resultado = true
   while (resultado == true){
     image(capture,0, 100,displayWidth,displayHeight-200); 
   }
@@ -91,6 +97,7 @@ function camara()  {
 
 function texto(){
     // texto principal a desplegarce
+  resultado = false
   textSize(16);
   for (var i = 0; i < seaRoseLines.length; i++) {
     fill(128+(i*10));
