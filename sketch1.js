@@ -34,15 +34,17 @@ function setup() {
   boton = createButton('captura'); // crea boton de captura imagen
   boton.position(displayWidth/2-100/2+100, displayHeight - 65 ); // posicion del boton 
   boton.size(100);
-  boton.class("btn btn-warning","#F0DB4F")
+  boton.class("btn btn-warning")
   boton.mousePressed(capturarimagen); // accion al precionar el boton 
   boton2 = createButton('pausa'); // crea boton de captura imagen
   boton2.position(displayWidth/2-100/2, displayHeight - 65 ); // posicion del boton
   boton2.size(100);
+  boton2.class("btn btn-warning")
   boton2.mousePressed(pausa); // accion al precionar el boton 
   boton3 = createButton('continuar'); // crea boton de captura imagen
   boton3.position(displayWidth/2-100/2-100, displayHeight - 65 ); // posicion del boton
   boton3.size(100);
+  boton3.class("btn btn-warning")
   boton3.mousePressed(continuar); // accion al precionar el boton
 }
 
