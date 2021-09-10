@@ -50,9 +50,9 @@ function setup() {
     this.modificar = modificar
   }
   function modificar(posicionX,boton){
-    boton.position(posicionX, displayHeight - 65 ), // posicion del boton 
-    boton.size(100),
-    boton.class("btn btn-warning"),
+    this.modificar = boton.position(posicionX, displayHeight - 65 ), // posicion del boton 
+    this.modificar = boton.size(100),
+    this.modificar = boton.class("btn btn-warning"),
   }
   boton1 = botones(createButton('captura'))
   boton2 = botones(createButton('pausa'))
