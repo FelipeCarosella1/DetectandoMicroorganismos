@@ -34,7 +34,7 @@ function setup() {
   boton = createButton('captura'); // crea boton de captura imagen
   boton.position(displayWidth/2-100/2+100, displayHeight - 65 ); // posicion del boton 
   boton.size(100);
-  boton.style("background-color","#F0DB4F")
+  boton.class("btn btn-warning","#F0DB4F")
   boton.mousePressed(capturarimagen); // accion al precionar el boton 
   boton2 = createButton('pausa'); // crea boton de captura imagen
   boton2.position(displayWidth/2-100/2, displayHeight - 65 ); // posicion del boton
