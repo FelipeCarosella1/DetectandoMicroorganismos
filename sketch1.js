@@ -46,7 +46,7 @@ function setup() {
     boton[2].size(100);
     boton[2].class("btn btn-warning");
     boton[2].mousePressed(continuar); // accion al precionar el boton
-  boton.class("btn-group");
+    boton.class("btn-group");
 }
 
 function pausa() {
