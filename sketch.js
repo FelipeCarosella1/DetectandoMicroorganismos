@@ -36,9 +36,9 @@ function setup() {
             capture.hide();
           }
   fill(80);
-  sup = rect(0,0,displayWidth,100);
-  fill("#F0DB4F");
-  pie = rect(0,displayHeight-100,displayWidth,displayHeight);
+ // sup = rect(0,0,displayWidth,100);
+ // fill("#F0DB4F");
+  //pie = rect(0,displayHeight-100,displayWidth,displayHeight);
   et = createP("Más agua limpia más vida");
   et.position(50,-30);
   et.style("font-size","50px");
