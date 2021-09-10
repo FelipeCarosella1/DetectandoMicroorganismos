@@ -30,36 +30,22 @@ function setup() {
             capture.hide();
           }
 // botones para acciones
-
-    boton1 = createButton('captura'), // crea boton de captura imagen
-    
-    boton1.mousePressed(capturarimagen), // accion al precionar el boton 
-    boton2 = createButton('pausa'), // crea boton de captura imagen
-    boton2.position(displayWidth/2-100/2, displayHeight - 65 ), // posicion del boton
-    boton2.size(100),
-    boton2.class("btn btn-warning"),
-    boton2.mousePressed(pausa), // accion al precionar el boton 
-    boton3 = createButton('continuar'), // crea boton de captura imagen
-    boton3.position(displayWidth/2-100/2-100, displayHeight - 65 ), // posicion del boton
-    boton3.size(100),
-    boton3.class("btn btn-warning"),
-    boton3.mousePressed(continuar); // accion al precionar el boton
-  
-  function botones(crear){
-    this.crear = crear
-    this.modificar = modificar
-  }
-  function modificar(posicionX,boton){
-    this.modificar = boton.position(posicionX, displayHeight - 65 ), // posicion del boton 
-    this.modificar = boton.size(100),
-    this.modificar = boton.class("btn btn-warning"),
-  }
-  boton1 = botones(createButton('captura'))
-  boton2 = botones(createButton('pausa'))
-  boton3 = botones(createButton('continuar'))
-  boton1.modificar(displayWidth/2-100/2+100,boton1)
-  boton2.modificar(displayWidth/2-100/2,boton2)
-  boton3.modificar(displayWidth/2-100/2-100,boton3)
+  boton = [boton1 = createButton('captura'),boton2 = createButton('pausa'),boton3 = createButton('continuar')]
+    // crea boton de captura imagen
+    boton[0].position(displayWidth/2-100/2+100, displayHeight - 65 ); // posicion del boton 
+    boton[0].size(100);
+    boton[0].class("btn btn-warning");
+    boton[0].mousePressed(capturarimagen); // accion al precionar el boton 
+     // crea boton de captura imagen
+    boton[1].position(displayWidth/2-100/2, displayHeight - 65 ); // posicion del boton
+    boton[1].size(100);
+    boton[1].class("btn btn-warning");
+    boton[1].mousePressed(pausa); // accion al precionar el boton 
+     // crea boton de captura imagen
+    boton[2].position(displayWidth/2-100/2-100, displayHeight - 65 ); // posicion del boton
+    boton[2].size(100);
+    boton[2].class("btn btn-warning");
+    boton[2].mousePressed(continuar); // accion al precionar el boton
   boton.class("btn-group");
 }
 
