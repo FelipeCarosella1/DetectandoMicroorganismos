@@ -31,21 +31,27 @@ function setup() {
             capture.hide();
           }
 // botones para acciones
-
+  texto = createP("Clasificar");
+  texto.position(50,50);
+  texto.style("background-color", "#F0DB4F");
+  texto.style("font-size", "20px");
   boton1 = createButton('captura'); // crea boton de captura imagen
   boton1.position(displayWidth/2-100/2+100+10, displayHeight - 65 ); // posicion del boton 
   boton1.size(100);
-  boton1.class("btn btn-warning")
+  boton1.style("background-color: #F0DB4F");
+  boton1.class("btn")
   boton1.mousePressed(capturarimagen); // accion al precionar el boton 
   boton2 = createButton('pausa'); // crea boton de captura imagen
   boton2.position(displayWidth/2-100/2, displayHeight - 65 ); // posicion del boton
   boton2.size(100);
+  boton2.style("background-color: #F0DB4F");
   boton2.class("btn btn-warning")
   boton2.mousePressed(pausa); // accion al precionar el boton 
   boton3 = createButton('continuar'); // crea boton de captura imagen
   boton3.position(displayWidth/2-100/2-100-10, displayHeight - 65 ); // posicion del boton
   boton3.size(100);
-  boton3.class("btn btn-warning")
+  boton3.style("background-color: #F0DB4F");
+  boton3.class("btn")
   boton3.mousePressed(continuar); // accion al precionar el boton
 }
 
