@@ -2,6 +2,7 @@ var capture;
 let boton1;
 let boton2;
 let boton3;
+let result;
 
 function preload () {
 // lee el archivo de texto y coloca su contenido en una 
@@ -21,6 +22,7 @@ function setup() {
                     exact: "environment" // accede a la camara frontal
                       }
                     }
+          result = true
               };
 
   capture = createCapture(constraints); // objeto para control camara frontal mobil
@@ -73,5 +75,10 @@ function capturarimagen() {
 }
 
 function draw(){
-  image(capture,100, 100,displayWidth-200,displayWidth-200);
+  if result = true{
+    image(capture,100, 100,displayWidth-200,displayWidth-200);
+  }
+  else{
+    image(capture,50, 100,displayWidth-100,displayWidth-100);
+  }
 }
