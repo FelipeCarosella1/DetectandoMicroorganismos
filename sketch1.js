@@ -2,7 +2,7 @@ var capture;
 let boton1;
 let boton2;
 let boton3;
-var result = false;
+var result;
 
 function preload () {
 // lee el archivo de texto y coloca su contenido en una 
@@ -22,15 +22,16 @@ function setup() {
                     exact: "environment" // accede a la camara frontal
                       }
                     }
-          result = true;
               };
 
   capture = createCapture(constraints); // objeto para control camara frontal mobil
   capture.hide();
+  result = true;
     } else {
             console.log("No es un dispositivo movil");
             capture = createCapture(VIDEO);
             capture.hide();
+            result = false;
           }
 // botones para acciones
   texto = createP("Clasificar");
