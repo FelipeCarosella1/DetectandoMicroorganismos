@@ -67,5 +67,5 @@ function capturarimagen() {
 }
 
 function draw(){
-  image(capture,100, 50,displayWidth-50,displayHeight-200);
+  image(capture,50, 100,displayWidth-100,displayHeight-200);
 }
