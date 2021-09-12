@@ -2,7 +2,7 @@ var capture;
 let boton1;
 let boton2;
 let boton3;
-let result;
+let result = false;
 
 function preload () {
 // lee el archivo de texto y coloca su contenido en una 
@@ -75,7 +75,7 @@ function capturarimagen() {
 }
 
 function draw(){
-  if result = true{
+  if result == true{
     image(capture,100, 100,displayWidth-200,displayWidth-200);
   }
   else{
