@@ -2,7 +2,7 @@ var capture;
 let boton1;
 let boton2;
 let boton3;
-let result = false;
+var result = false;
 
 function preload () {
 // lee el archivo de texto y coloca su contenido en una 
