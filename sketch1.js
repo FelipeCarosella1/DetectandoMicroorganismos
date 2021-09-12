@@ -37,7 +37,7 @@ function setup() {
   texto = createP("Clasificar");
   texto.position(50,100);
   texto.style("background-color", "#F0DB4F");
-  texto.style("font-size", "20px");
+  texto.style("font-size", "30px");
   boton1 = createButton('captura'); // crea boton de captura imagen
   boton1.position(displayWidth/2-100/2+100+10, displayHeight - 65 ); // posicion del boton 
   boton1.size(100);
@@ -77,7 +77,7 @@ function capturarimagen() {
 
 function draw(){
   if (result == true){
-    image(capture,50, 100,displayWidth-100,displayWidth-100);
+    image(capture,50, 100,displayWidth-100,displayWidth);
   }
   else{
     image(capture,100, 100,displayWidth-200,displayWidth-200);
