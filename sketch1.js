@@ -77,9 +77,9 @@ function capturarimagen() {
 
 function draw(){
   if (result == true){
-    image(capture,100, 100,displayWidth-200,displayWidth-200);
+    image(capture,50, 100,displayWidth-100,displayWidth-100);
   }
   else{
-    image(capture,50, 100,displayWidth-100,displayWidth-100);
+    image(capture,100, 100,displayWidth-200,displayWidth-200);
   }
 }
