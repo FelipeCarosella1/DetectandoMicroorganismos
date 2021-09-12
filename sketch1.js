@@ -32,7 +32,7 @@ function setup() {
           }
 // botones para acciones
   texto = createP("Clasificar");
-  texto.position(50,50);
+  texto.position(50,100);
   texto.style("background-color", "#F0DB4F");
   texto.style("font-size", "20px");
   boton1 = createButton('captura'); // crea boton de captura imagen
@@ -73,5 +73,5 @@ function capturarimagen() {
 }
 
 function draw(){
-  image(capture,50, 100,displayWidth-100,displayHeight-200);
+  image(capture,50, 100,displayWidth-100,displayWidth-100);
 }
