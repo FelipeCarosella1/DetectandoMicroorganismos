@@ -22,7 +22,7 @@ function setup() {
                     exact: "environment" // accede a la camara frontal
                       }
                     }
-          result = true
+          result = true;
               };
 
   capture = createCapture(constraints); // objeto para control camara frontal mobil
