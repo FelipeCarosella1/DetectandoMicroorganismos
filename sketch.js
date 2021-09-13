@@ -11,7 +11,7 @@ function preload () {
 
 function setup() {
   createCanvas(displayWidth, displayHeight); // crea un lienzo de pantalla completa
-  background(50); 
+  background("#2B2B2B"); 
   if (isMobileDevice()) {
         console.log("Es un dispositivo movil");
         margen = 200;
@@ -27,8 +27,9 @@ function setup() {
   textSize(16);
   for (var i = 0; i < seaRoseLines.length; i++) {
     if i > displayWidth-margen{
-        text(seaRoseLines[i], 20, 150+i*20);
+      i = 0
   }
+  text(seaRoseLines[i], 20, 150+i*20);
 }
 
 //  define si es pantalla de PC o dispostivo mobil 
