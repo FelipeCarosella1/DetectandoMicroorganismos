@@ -28,6 +28,7 @@ function setup() {
   for (var i = 0; i < seaRoseLines.length; i++) {
     if (i > displayWidth-margen){
       i = 0
+    }
   }
   text(seaRoseLines[i], 20, 150+i*20);
 }
