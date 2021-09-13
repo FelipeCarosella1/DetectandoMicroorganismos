@@ -26,7 +26,7 @@ function setup() {
   // texto principal a desplegarce
   textSize(16);
   for (var i = 0; i < seaRoseLines.length; i++) {
-    if i > displayWidth-margen{
+    if (i > displayWidth-margen){
       i = 0
   }
   text(seaRoseLines[i], 20, 150+i*20);
