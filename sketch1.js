@@ -80,6 +80,6 @@ function draw(){
     image(capture,0, 100,displayWidth-100,displayWidth);
   }
   else{
-    image(capture,100, 100,320,120);
+    image(capture,100, 100,320,240);
   }
 }
