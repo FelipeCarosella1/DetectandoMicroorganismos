@@ -2,6 +2,7 @@ var capture;
 let boton1;
 let boton2;
 let boton3;
+let seccion;
 var result;
 
 function preload () {
@@ -35,13 +36,15 @@ function setup() {
           }
 // botones para acciones
   if (result == true){
-    margen = 50
-    tamañoB = 100
+    margen = 50;
+    tamañoB = 100;
+    seccion = rect(320*2+100,240*2+100,displayWidth-margen,displayWidth-margen);
   }
   else{
-    margen = 100
-    tamañoB = 300
+    margen = 100;
+    tamañoB = 300;
   }
+  seccion.style("background-color", "#F0DB4F");
   texto = createP("Clasificar");
   texto.position(margen,100);
   texto.style("background-color", "#F0DB4F");
