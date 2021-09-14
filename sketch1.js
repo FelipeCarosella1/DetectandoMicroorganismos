@@ -38,12 +38,12 @@ function setup() {
   if (result == true){
     margen = 50;
     tamañoB = 100;
-    positionRect = [320*2+100,100] 
+    positionRect = [margen,displayWidth+100] 
   }
   else{
     margen = 100;
     tamañoB = 300;
-    positionRect = [margen,displayWidth+100] 
+    positionRect = [320*2+100,100] 
   }
   fill("#F0DB4F");
   seccion = rect(positionRect[0],positionRect[1],displayWidth-margen,240*2);
