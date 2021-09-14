@@ -45,8 +45,8 @@ function setup() {
     tamañoB = 300;
     positionRect = [margen,displayWidth+100] 
   }
+  fill("#F0DB4F");
   seccion = rect(positionRect[0],positionRect[1],displayWidth-margen,240*2);
-  seccion.style("color", "#F0DB4F");
   texto = createP("Clasificar");
   texto.position(margen,100);
   texto.style("background-color", "#F0DB4F");
