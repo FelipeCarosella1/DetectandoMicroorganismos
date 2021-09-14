@@ -38,12 +38,14 @@ function setup() {
   if (result == true){
     margen = 50;
     tamañoB = 100;
+    positionRect = [320*2+100,100] 
   }
   else{
     margen = 100;
     tamañoB = 300;
-    seccion = rect(320*2+100,240*2+100,displayWidth-margen,displayWidth-margen);
+    positionRect = [margen,displayWidth+100] 
   }
+  seccion = rect(positionRect[0],positionRect[1],displayWidth-margen,240*2);
   seccion.style("background-color", "#F0DB4F");
   texto = createP("Clasificar");
   texto.position(margen,100);
