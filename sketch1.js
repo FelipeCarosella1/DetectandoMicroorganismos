@@ -4,6 +4,8 @@ let boton2;
 let boton3;
 let seccion;
 var result;
+let margen;
+let tamañoB;
 
 function preload () {
 // lee el archivo de texto y coloca su contenido en una 
@@ -34,19 +36,17 @@ function setup() {
             capture.hide();
             result = false;
           }
-  margen = 0
-  tamañoB = 0
   if (result == true){
     margen = 50;
     tamañoB = 100;
-    positionRect = [margen,displayWidth+100]
+    positionRect = [margen,displayWidth-100]
   }
   else{
-    let 
     margen = 100;
-    let tamañoB = 300;
+    tamañoB = 300;
     positionRect = [320*2+100,100] 
   }
+
   fill("#F0DB4F");
   seccion = rect(positionRect[0],positionRect[1],displayWidth-margen,240*2);
   texto = createP("Clasificar");
