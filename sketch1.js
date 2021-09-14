@@ -34,15 +34,17 @@ function setup() {
             capture.hide();
             result = false;
           }
-// botones para acciones
+  margen = 0
+  tamañoB = 0
   if (result == true){
     margen = 50;
     tamañoB = 100;
-    positionRect = [margen,displayWidth+100] 
+    positionRect = [margen,displayWidth+100]
   }
   else{
+    let 
     margen = 100;
-    tamañoB = 300;
+    let tamañoB = 300;
     positionRect = [320*2+100,100] 
   }
   fill("#F0DB4F");
@@ -51,6 +53,7 @@ function setup() {
   texto.position(margen,100);
   texto.style("background-color", "#F0DB4F");
   texto.style("font-size", "30px");
+  // botones para acciones
   boton1 = createButton('captura'); // crea boton de captura imagen
   boton1.position(displayWidth/2-100/2+100+10, displayHeight - 65 ); // posicion del boton 
   boton1.size(tamañoB);
