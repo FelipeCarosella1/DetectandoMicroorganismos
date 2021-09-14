@@ -39,7 +39,7 @@ function setup() {
   if (result == true){
     margen = 50;
     tamañoB = 100;
-    positionRect = [margen,displayWidth-100]
+    positionRect = [margen,displayHeight+100]
   }
   else{
     margen = 100;
@@ -48,7 +48,7 @@ function setup() {
   }
 
   fill("#F0DB4F");
-  seccion = rect(positionRect[0],positionRect[1],displayWidth-margen,240*2);
+  seccion = rect(positionRect[0],positionRect[1],displayWidth-(320*2+margen)-margen,240*2);
   texto = createP("Clasificar");
   texto.position(margen,100);
   texto.style("background-color", "#F0DB4F");
