@@ -12,7 +12,7 @@ function preload () {
 
 function setup() {
   createCanvas(displayWidth, displayHeight); // crea un lienzo de pantalla completa
-    background(50);  
+    background("#2B2B2B");  
     if (isMobileDevice()) {
         console.log("Es un dispositivo movil");
           var constraints = {
@@ -80,6 +80,6 @@ function draw(){
     image(capture,0, 100,displayWidth-100,displayWidth);
   }
   else{
-    image(capture,100, 100,displayWidth-200,displayWidth-200);
+    image(capture,100, 100,320,120);
   }
 }
