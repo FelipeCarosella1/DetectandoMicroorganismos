@@ -105,7 +105,7 @@ function capturarimagen() {
 
 function classifyVideo() {
 // se comienza con la clasificacion del video  y se obtinen una salida de datos con los resultados obtenidos
-  clasificador.classify(video, gotResults); // se guardan los resultados de la clasificacion en gotResults
+  clasificador.classify(capture, gotResults); // se guardan los resultados de la clasificacion en gotResults
 }
 
 // TERCER PASO  se obtienen los resultados de la clsificaion en dos variables
