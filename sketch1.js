@@ -34,25 +34,33 @@ function setup() {
             result = false;
           }
 // botones para acciones
+  if (result == true){
+    margen = 50
+    tamañoB = 100
+  }
+  else{
+    margen = 100
+    tamañoB = 300
+  }
   texto = createP("Clasificar");
-  texto.position(50,100);
+  texto.position(margen,100);
   texto.style("background-color", "#F0DB4F");
   texto.style("font-size", "30px");
   boton1 = createButton('captura'); // crea boton de captura imagen
   boton1.position(displayWidth/2-100/2+100+10, displayHeight - 65 ); // posicion del boton 
-  boton1.size(100);
+  boton1.size(tamañoB);
   boton1.style("background-color: #F0DB4F");
   boton1.class("btn")
   boton1.mousePressed(capturarimagen); // accion al precionar el boton 
   boton2 = createButton('pausa'); // crea boton de captura imagen
   boton2.position(displayWidth/2-100/2, displayHeight - 65 ); // posicion del boton
-  boton2.size(100);
+  boton2.size(tamañoB);
   boton2.style("background-color: #F0DB4F");
   boton2.class("btn btn-warning")
   boton2.mousePressed(pausa); // accion al precionar el boton 
   boton3 = createButton('continuar'); // crea boton de captura imagen
   boton3.position(displayWidth/2-100/2-100-10, displayHeight - 65 ); // posicion del boton
-  boton3.size(100);
+  boton3.size(tamañoB);
   boton3.style("background-color: #F0DB4F");
   boton3.class("btn")
   boton3.mousePressed(continuar); // accion al precionar el boton
@@ -80,6 +88,6 @@ function draw(){
     image(capture,0, 100,displayWidth-100,displayWidth);
   }
   else{
-    image(capture,100, 100,320,240);
+    image(capture,100, 100,320*2,240*2);
   }
 }
