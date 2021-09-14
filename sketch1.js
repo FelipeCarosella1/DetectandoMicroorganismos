@@ -38,11 +38,11 @@ function setup() {
   if (result == true){
     margen = 50;
     tamañoB = 100;
-    seccion = rect(320*2+100,240*2+100,displayWidth-margen,displayWidth-margen);
   }
   else{
     margen = 100;
     tamañoB = 300;
+    seccion = rect(320*2+100,240*2+100,displayWidth-margen,displayWidth-margen);
   }
   seccion.style("background-color", "#F0DB4F");
   texto = createP("Clasificar");
