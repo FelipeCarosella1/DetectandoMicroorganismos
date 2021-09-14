@@ -10,6 +10,8 @@ let margen;
 let tamañoB;
 let nombre;
 let porcentaje;
+let nombreL;
+let porcentajeL;
 
 function preload () {
   // cargamos el link donde se encuentra nuestro modelo pre entrehado por Teachable Machine 
@@ -53,7 +55,7 @@ function setup() {
   }
 
   fill("#F0DB4F");
-  seccion = rect(positionRect[0],positionRect[1],displayWidth-(320*2+margen)-margen,240*2);
+  seccion = rect(positionRect[0],positionRect[1],displayWidth-(320*2+margen+100)-margen,240*2);
 
   titulo = createP("Clasificar");
   titulo.position(margen,100);
@@ -116,9 +118,14 @@ function gotResults(error, results) {
   // se almacenan los resultados obtenidos en las variables 
   nombre = results[0].label; // nombre de la clasificacion
   porcentaje = int((results[0].confidence)*100)+"%"; // % de asierto en la clasificacion
-  textSize(16);
-  text(porcentaje, 320*2+200, 300); // muestra el % de asierto
-  text(nombre, 320*2+200, 200);
+  porcentajeL = createP(porcentaje); // muestra el % de asierto
+  nombreL = createP(nombre);
+  nombreL.position(320*2+200,200);
+  titulo.style("font-size", "16px");
+
+  porcentajeL.position( 320*2+200, 300);
+  titulo.style("font-size", "16px");
+
   classifyVideo(); 
 }
 
