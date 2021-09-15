@@ -88,7 +88,7 @@ function setup() {
   nombreL = createP("Nombre: ");
   porcentajeL = createP("Porcentaje: "); // muestra el % de asierto
   nombreL.position(320*2+200,200)
-  porcentajeL.position( 320*2+200, 300);;}
+  porcentajeL.position( 320*2+200, 300);
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
   classifyVideo();
