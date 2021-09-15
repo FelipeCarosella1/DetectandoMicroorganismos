@@ -119,6 +119,7 @@ function gotResults(error, results) {
   nombre = results[0].label; // nombre de la clasificacion
   porcentaje = int((results[0].confidence)*100)+"%"; // % de asierto en la clasificacion
   porcentajeL = createP(porcentaje); // muestra el % de asierto
+  nombreL.hide()
   nombreL = createP(nombre);
   nombreL.position(320*2+200,200);
   nombreL.style("font-size", "16px");
