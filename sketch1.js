@@ -85,6 +85,8 @@ function setup() {
   boton3.mousePressed(continuar); // accion al precionar el boton
 
  // comienza la clasificacion
+  nombreL = createP("Nombre:");
+  
   classifyVideo();
 }
 
@@ -111,21 +113,19 @@ function classifyVideo() {
 }
 
 // TERCER PASO  se obtienen los resultados de la clsificaion en dos variables
-function gotResults(error, results) {
-    if (error) {
+function gotResults(error, results){
+  if (error) {
       console.error(error); // muestra el error encontrado  
   }else{
-  // se almacenan los resultados obtenidos en las variables 
+      // se almacenan los resultados obtenidos en las variables 
   nombre = results[0].label; // nombre de la clasificacion
   porcentaje = int((results[0].confidence)*100)+"%"; // % de asierto en la clasificacion
-  nombreL.style("display", "none");
-  porcentajeL.style("display", "none");
+  nombreL.hide();
+
   nombreL = createP(nombre);
   porcentajeL = createP(porcentaje); // muestra el % de asierto
   nombreL.position(320*2+200,200);
-  nombreL.style{ 
-    display: none;
-  };
+  nombreL.style("font-size", "25px");
   porcentajeL.position( 320*2+200, 300);
   porcentajeL.style("font-size", "25px");
   classifyVideo(); 
