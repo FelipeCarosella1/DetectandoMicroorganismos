@@ -118,13 +118,9 @@ function gotResults(error, results) {
   // se almacenan los resultados obtenidos en las variables 
   nombre = results[0].label; // nombre de la clasificacion
   porcentaje = int((results[0].confidence)*100)+"%"; // % de asierto en la clasificacion
-  porcentajeL = createP(porcentaje); // muestra el % de asierto
-  nombreL.hide()
-  nombreL = createP(nombre);
-  nombreL.position(320*2+200,200);
-  nombreL.style("font-size", "16px");
-  porcentajeL.position( 320*2+200, 300);
-  porcentajeL.style("font-size", "16px");
+  textSize(25);
+  text(nombre,320*2+200,200);
+  text(porcentaje,320*2+200, 300);
   classifyVideo(); 
   }
 }
@@ -136,5 +132,4 @@ function draw(){
   else{
     image(capture,100, 100,320*2,240*2);
   }
-
 }
