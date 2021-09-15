@@ -130,7 +130,7 @@ function gotResults(error, results){
   porcentajeL.style("font-size", "25px");
   classifyVideo(); 
   }
-}
+} 
 
 function draw(){
   if (result == true){
