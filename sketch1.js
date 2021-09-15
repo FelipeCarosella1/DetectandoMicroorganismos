@@ -38,9 +38,9 @@ function setup() {
       capture.hide();
       margen = 50;
       tamañoB = 100;
-      positionRect = [margen,displayHeight,displayWidth-margen,300]
+      positionRect = [0,displayHeight,displayWidth-margen,300]
       positionCam =[0, 100,displayWidth,displayWidth+100]
-      positionEtiquetas = [50,200];
+      positionEtiquetas = [50,400];
 
   } else {
       console.log("No es un dispositivo movil");
