@@ -135,6 +135,6 @@ function draw(){
   else{
     image(capture,100, 100,320*2,240*2);
   }
+  seccion = rect(positionRect[0],positionRect[1],displayWidth-(320*2+margen+100)-margen,240*2);
   seccion.style("display", "none");
-  seccion.show();
 }
