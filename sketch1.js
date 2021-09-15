@@ -2,7 +2,7 @@ var capture;
 let boton1;
 let boton2;
 let boton3;
-let seccion;
+var seccion;
 let titulo;
 let clasificador;
 var result;
@@ -119,7 +119,6 @@ function gotResults(error, results) {
   nombre = results[0].label; // nombre de la clasificacion
   porcentaje = int((results[0].confidence)*100)+"%"; // % de asierto en la clasificacion
   porcentajeL = createP(porcentaje); // muestra el % de asierto
-  nombreL.hide()
   nombreL = createP(nombre);
   nombreL.position(320*2+200,200);
   nombreL.style("font-size", "16px");
@@ -136,6 +135,6 @@ function draw(){
   else{
     image(capture,100, 100,320*2,240*2);
   }
-  seccion.hide()
-  seccion.show()
+  seccion.hide();
+  seccion.show();
 }
