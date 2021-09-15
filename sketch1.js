@@ -113,14 +113,12 @@ function classifyVideo() {
 // TERCER PASO  se obtienen los resultados de la clsificaion en dos variables
 function gotResults(error, results) {
     if (error) {
-      console.error(error); // muestra el error encontrado  
+      console.log(error); // muestra el error encontrado  
   }else{
   // se almacenan los resultados obtenidos en las variables 
   nombre = results[0].label; // nombre de la clasificacion
   porcentaje = int((results[0].confidence)*100)+"%"; // % de asierto en la clasificacion
-  textSize(25);
-  text(nombre,320*2+200,200);
-  text(porcentaje,320*2+200, 300);
+  
   classifyVideo(); 
   }
 }
@@ -132,4 +130,7 @@ function draw(){
   else{
     image(capture,100, 100,320*2,240*2);
   }
+  textSize(25);
+  text(nombre,320*2+200,200);
+  text(porcentaje,320*2+200, 300);
 }
