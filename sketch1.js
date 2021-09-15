@@ -114,7 +114,7 @@ function classifyVideo() {
 function gotResults(error, results) {
     if (error) {
       console.error(error); // muestra el error encontrado  
-  }
+  }else{
   // se almacenan los resultados obtenidos en las variables 
   nombre = results[0].label; // nombre de la clasificacion
   porcentaje = int((results[0].confidence)*100)+"%"; // % de asierto en la clasificacion
@@ -126,6 +126,7 @@ function gotResults(error, results) {
   porcentajeL.position( 320*2+200, 300);
   porcentajeL.style("font-size", "16px");
   classifyVideo(); 
+  }
 }
 
 function draw(){
