@@ -130,9 +130,9 @@ function gotResults(error, results){
   porcentajeL = createP("Porcentaje: " + porcentaje); // muestra el % de asierto
   if (result == true){
     nombreL.position(0,200);
-    porcentajeL.position( 320*2+200, 300);
+    porcentajeL.position(100, 300);
   }else{
-    nombreL.position(320*2+200,200);
+    nombreL.position(320*2+200,displayWidth+200);
     porcentajeL.position( 320*2+200, 300);}
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
