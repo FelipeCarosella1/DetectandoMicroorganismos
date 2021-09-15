@@ -20,8 +20,11 @@ function preload () {
 }
 
 function setup() {
-  createCanvas(displayWidth, displayHeight); // crea un lienzo de pantalla completa
-    background("#2B2B2B");  
+  //Se crea el lienzo
+  createCanvas(displayWidth, displayHeight+100); // crea un lienzo de pantalla completa
+  background("#2B2B2B");  
+
+  //Activa la camara frontal si es un dispositivo movil
     if (isMobileDevice()) {
         console.log("Es un dispositivo movil");
           var constraints = {
@@ -54,15 +57,16 @@ function setup() {
     positionRect = [320*2+200,100] 
   }
 
-  fill("#F0DB4F");
-  seccion = rect(positionRect[0],positionRect[1],displayWidth-(320*2+margen+100)-margen,240*2);
-
   titulo = createP("Clasificar");
   titulo.position(margen,100);
   titulo.style("background-color", "#F0DB4F");
   titulo.style("font-size", "30px");
 
-  // botones para acciones
+  //Creacion de la seccion de clasificacion
+  fill("#F0DB4F");
+  seccion = rect(positionRect[0],positionRect[1],displayWidth-(320*2+margen+100)-margen,240*2);
+
+  // Creacion botones para acciones
   boton1 = createButton('captura'); // crea boton de captura imagen
   boton1.position(displayWidth/2-tamañoB/2+tamañoB+10, 240*2 + 200); // posicion del boton 
   boton1.size(tamañoB);
@@ -94,6 +98,7 @@ function setup() {
   classifyVideo();
 }
 
+//Funciones de botones
 function pausa() {
     capture.stop(); // pausa el video
 }
@@ -111,12 +116,12 @@ function capturarimagen() {
     save("image"+".jpg"); // captura imagen en formato jpg
 }
 
-function classifyVideo() {
 // se comienza con la clasificacion del video  y se obtinen una salida de datos con los resultados obtenidos
+function classifyVideo() {
   clasificador.classify(capture, gotResults); // se guardan los resultados de la clasificacion en gotResults
 }
 
-// TERCER PASO  se obtienen los resultados de la clsificaion en dos variables
+// Obtenemos resultados de clasificacion
 function gotResults(error, results){
   if (error) {
       console.log(error); // muestra el error encontrado  
@@ -140,6 +145,7 @@ function gotResults(error, results){
   }
 } 
 
+//Mostramos la web cam
 function draw(){
   if (result == true){
     image(capture,0, 100,displayWidth,displayWidth+100);
