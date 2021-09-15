@@ -135,6 +135,6 @@ function draw(){
   else{
     image(capture,100, 100,320*2,240*2);
   }
-  seccion.hide();
+  seccion.style("display", "none");
   seccion.show();
 }
