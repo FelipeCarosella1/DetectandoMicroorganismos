@@ -64,7 +64,7 @@ function setup() {
 
   // botones para acciones
   boton1 = createButton('captura'); // crea boton de captura imagen
-  boton1.position(displayWidth/2-tamañoB/2+tamañoB+10, 240*2 + 100); // posicion del boton 
+  boton1.position(displayWidth/2-tamañoB/2+tamañoB+10, 240*2 + 200 +); // posicion del boton 
   boton1.size(tamañoB);
   boton1.style("background-color: #F0DB4F");
   boton1.class("btn")
