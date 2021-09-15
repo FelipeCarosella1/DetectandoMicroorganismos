@@ -64,21 +64,21 @@ function setup() {
 
   // botones para acciones
   boton1 = createButton('captura'); // crea boton de captura imagen
-  boton1.position(displayWidth/2-100/2+100+10, displayHeight - 65 ); // posicion del boton 
+  boton1.position(displayWidth/2-tamañoB/2+tamañoB+10, displayHeight - 65 ); // posicion del boton 
   boton1.size(tamañoB);
   boton1.style("background-color: #F0DB4F");
   boton1.class("btn")
   boton1.mousePressed(capturarimagen); // accion al precionar el boton 
 
   boton2 = createButton('pausa'); // crea boton de captura imagen
-  boton2.position(displayWidth/2-100/2, displayHeight - 65 ); // posicion del boton
+  boton2.position(displayWidth/2-tamañoB/2, displayHeight - 65 ); // posicion del boton
   boton2.size(tamañoB);
   boton2.style("background-color: #F0DB4F");
   boton2.class("btn btn-warning")
   boton2.mousePressed(pausa); // accion al precionar el boton 
 
   boton3 = createButton('continuar'); // crea boton de captura imagen
-  boton3.position(displayWidth/2-100/2-100-10, displayHeight - 65 ); // posicion del boton
+  boton3.position(displayWidth/2-tamañoB/2-tamañoB-10, displayHeight - 65 ); // posicion del boton
   boton3.size(tamañoB);
   boton3.style("background-color: #F0DB4F");
   boton3.class("btn")
@@ -124,9 +124,12 @@ function gotResults(error, results){
   porcentajeL.hide();
   nombreL = createP("Porcentaje: " + nombre);
   porcentajeL = createP("Porcentaje: " + porcentaje); // muestra el % de asierto
-  nombreL.position(320*2+200,200);
+  if (result == true){
+
+  }else{
+    nombreL.position(320*2+200,200)
+    porcentajeL.position( 320*2+200, 300);;}
   nombreL.style("font-size", "25px");
-  porcentajeL.position( 320*2+200, 300);
   porcentajeL.style("font-size", "25px");
   classifyVideo(); 
   }
@@ -134,7 +137,7 @@ function gotResults(error, results){
 
 function draw(){
   if (result == true){
-    image(capture,0, 100,displayWidth-100,displayWidth);
+    image(capture,0, 100,displayWidth,displayWidth+100);
   }
   else{
     image(capture,100, 100,320*2,240*2);
