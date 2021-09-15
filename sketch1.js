@@ -21,7 +21,7 @@ function preload () {
 
 function setup() {
   //Se crea el lienzo
-  createCanvas(displayWidth, displayHeight+100); // crea un lienzo de pantalla completa
+  createCanvas(displayWidth, displayHeight+900); // crea un lienzo de pantalla completa
   background("#2B2B2B");  
 
   //Activa la camara frontal si es un dispositivo movil
@@ -49,12 +49,12 @@ function setup() {
   if (result == true){
     margen = 50;
     tamañoB = 100;
-    positionRect = [margen,displayHeight+100]
+    positionRect = [margen,displayHeight,displayWidth-margen,300]
   }
   else{
     margen = 100;
     tamañoB = 300;
-    positionRect = [320*2+200,100] 
+    positionRect = [320*2+200,100,displayWidth-(320*2+margen+100)-margen,240*2] 
   }
 
   titulo = createP("Clasificar");
@@ -64,7 +64,7 @@ function setup() {
 
   //Creacion de la seccion de clasificacion
   fill("#F0DB4F");
-  seccion = rect(positionRect[0],positionRect[1],displayWidth-(320*2+margen+100)-margen,240*2);
+  seccion = rect(positionRect[0],positionRect[1],positionRect[2],positionRect[3]);
 
   // Creacion botones para acciones
   boton1 = createButton('captura'); // crea boton de captura imagen
