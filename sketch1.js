@@ -26,36 +26,33 @@ function setup() {
 
   //Activa la camara frontal si es un dispositivo movil
     if (isMobileDevice()) {
-        console.log("Es un dispositivo movil");
-          var constraints = {
-                audio: false, // desactiva el audio de la cam o dispositivo movil
-                video: {
-                  facingMode: {
-                    exact: "environment" // accede a la camara frontal
-                      }
-                    }
-              };
+      console.log("Es un dispositivo movil");
+      var constraints = {
+            audio: false, // desactiva el audio de la cam o dispositivo movil
+            video: {
+            facingMode: {
+                exact: "environment" // accede a la camara frontal
+            }}};
 
-  capture = createCapture(constraints); // objeto para control camara frontal mobil
-  capture.hide();
-  result = true;
-    } else {
-            console.log("No es un dispositivo movil");
-            capture = createCapture(VIDEO);
-            capture.hide();
-            result = false;
-          }
+      capture = createCapture(constraints); // objeto para control camara frontal mobil
+      capture.hide();
+      margen = 50;
+      tamañoB = 100;
+      positionRect = [margen,displayHeight,displayWidth-margen,300]
+      positionCam =[0, 100,displayWidth,displayWidth+100]
+      positionEtiquetas = [50,200];
 
-  if (result == true){
-    margen = 50;
-    tamañoB = 100;
-    positionRect = [margen,displayHeight,displayWidth-margen,300]
-  }
-  else{
-    margen = 100;
-    tamañoB = 300;
-    positionRect = [320*2+200,100,displayWidth-(320*2+margen+100)-margen,240*2] 
-  }
+  } else {
+      console.log("No es un dispositivo movil");
+      capture = createCapture(VIDEO);
+      capture.hide();
+      result = false;
+      margen = 100;
+      tamañoB = 300;
+      positionRect = [320*2+200,100,displayWidth-(320*2+margen+100)-margen,240*2];
+      positionCam =[100, 100,320*2,240*2];
+      positionEtiquetas = [320*2+200,200];
+    }
 
   titulo = createP("Clasificar");
   titulo.position(margen,100);
@@ -68,21 +65,21 @@ function setup() {
 
   // Creacion botones para acciones
   boton1 = createButton('captura'); // crea boton de captura imagen
-  boton1.position(displayWidth/2-tamañoB/2+tamañoB+10, 240*2 + 200); // posicion del boton 
+  boton1.position(displayWidth/2-tamañoB/2+tamañoB+10, positionCam[3] + 2*margen); // posicion del boton 
   boton1.size(tamañoB);
   boton1.style("background-color: #F0DB4F");
   boton1.class("btn")
   boton1.mousePressed(capturarimagen); // accion al precionar el boton 
 
   boton2 = createButton('pausa'); // crea boton de captura imagen
-  boton2.position(displayWidth/2-tamañoB/2, 240*2 + 200); // posicion del boton
+  boton2.position(displayWidth/2-tamañoB/2, 240*2 + 2*margen); // posicion del boton
   boton2.size(tamañoB);
   boton2.style("background-color: #F0DB4F");
   boton2.class("btn btn-warning")
   boton2.mousePressed(pausa); // accion al precionar el boton 
 
   boton3 = createButton('continuar'); // crea boton de captura imagen
-  boton3.position(displayWidth/2-tamañoB/2-tamañoB-10, 240*2 + 200 ); // posicion del boton
+  boton3.position(displayWidth/2-tamañoB/2-tamañoB-10, positionCam[3] + 2*margen ); // posicion del boton
   boton3.size(tamañoB);
   boton3.style("background-color: #F0DB4F");
   boton3.class("btn")
@@ -133,24 +130,16 @@ function gotResults(error, results){
   porcentajeL.hide();
   nombreL = createP("Nombre: " + nombre);
   porcentajeL = createP("Porcentaje: " + porcentaje); // muestra el % de asierto
-  if (result == true){
-    nombreL.position(0,200);
-    porcentajeL.position(100, 300);
-  }else{
-    nombreL.position(320*2+200,displayWidth+200);
-    porcentajeL.position( 320*2+200, 300);}
+  nombreL.position(positionEtiquetas[0],positionEtiquetas[1]);
+  porcentajeL.position(positionEtiquetas[0], positionEtiquetas[1]+100);
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
   classifyVideo(); 
   }
 } 
 
+
 //Mostramos la web cam
 function draw(){
-  if (result == true){
-    image(capture,0, 100,displayWidth,displayWidth+100);
-  }
-  else{
-    image(capture,100, 100,320*2,240*2);
-  }
+  image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
 }
