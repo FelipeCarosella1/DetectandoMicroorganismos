@@ -91,8 +91,8 @@ function setup() {
  // comienza la clasificacion
   nombreL = createP("Nombre: ");
   porcentajeL = createP("Porcentaje: "); // muestra el % de asierto
-  nombreL.position(320*2+200,200)
-  porcentajeL.position( 320*2+200, 300);
+  nombreL.position(positionEtiquetas[0],positionEtiquetas[1])
+  porcentajeL.position(positionEtiquetas[0],positionEtiquetas[1]+100);
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
   classifyVideo();
@@ -142,18 +142,20 @@ function gotResults(error, results){
 }
 
 function despocicionar(){
-  if(contador == 1){
-    titulo.position(margen,200);
-    contador = contador-1;
-  }else{
-    titulo.position(margen,100);
-    contador = contador + 1;
-  }
-}
+  document.getElementById('despocicionar').id = 'posicionar';
+  titulo.position(margen,200);
 
+function posicionar(){
+  document.getElementById('posicionar').id = 'despocicionar';
+  titulo.position(margen,200);
+}
 
 //Mostramos la web cam
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
-  document.getElementById("tocar").onclick = despocicionar;
+  document.getElementById("despocicionar").onclick = despocicionar;
+  document.getElementById("posicionar").onclick = posicionar(){}
+
+  
+;
 }
