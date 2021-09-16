@@ -22,10 +22,11 @@ function preload () {
 }
 
 function setup() {
+  document.getElementById("despocicionar").onclick = despocicionar;
+  document.getElementById("posicionar").onclick = posicionar;
   //Se crea el lienzo
   createCanvas(displayWidth, displayHeight+900); // crea un lienzo de pantalla completa
   background("#2B2B2B");  
-
   //Activa la camara frontal si es un dispositivo movil
     if (isMobileDevice()) {
       console.log("Es un dispositivo movil");
@@ -153,6 +154,4 @@ function posicionar(){
 //Mostramos la web cam
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
-  document.getElementById("despocicionar").onclick = despocicionar;
-  document.getElementById("posicionar").onclick = posicionar;
 }
