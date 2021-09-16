@@ -12,7 +12,7 @@ let nombre;
 let porcentaje;
 let nombreL;
 let porcentajeL;
-let contador = 0;
+let contador = 1;
 
 function preload () {
   // cargamos el link donde se encuentra nuestro modelo pre entrehado por Teachable Machine 
