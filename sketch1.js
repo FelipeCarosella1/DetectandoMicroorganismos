@@ -22,7 +22,7 @@ function preload () {
 }
 
 function setup() {
-  document.getElementById("despocicionar").onclick = posicionardespocicionar;
+  document.getElementById("despocicionar").onclick = posicionar;
   document.getElementById("posicionar").onclick = despocicionar;
   //Se crea el lienzo
   createCanvas(displayWidth, displayHeight+900); // crea un lienzo de pantalla completa
