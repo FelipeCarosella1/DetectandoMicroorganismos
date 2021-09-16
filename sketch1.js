@@ -13,7 +13,7 @@ let porcentaje;
 let nombreL;
 let porcentajeL;
 let contador = 1;
-document.getElementById("tocar").onclick = despocicionar;
+
 
 function preload () {
   // cargamos el link donde se encuentra nuestro modelo pre entrehado por Teachable Machine 
@@ -155,5 +155,5 @@ function despocicionar(){
 //Mostramos la web cam
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
-  console.log(contador);
+  document.getElementById("tocar").onclick = despocicionar;
 }
