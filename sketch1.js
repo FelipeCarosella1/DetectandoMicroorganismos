@@ -146,12 +146,14 @@ function despocicionar(){
     titulo.position(margen,200);
     contador = contador-1;
   }else{
-    titulo.position(margen,100);}
+    titulo.position(margen,100);
     contador = contador + 1;
+  }
 }
 
 
 //Mostramos la web cam
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
+  console.log(contador);
 }
