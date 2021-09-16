@@ -53,7 +53,7 @@ function setup() {
       result = false;
       margen = 100;
       tamañoB = 300;
-      positionRect = [320*2+200,110,displayWidth-(320*2+margen+100)-margen,240*2-110];
+      positionRect = [320*2+200,100,displayWidth-(320*2+margen+100)-margen,240*2];
       positionCam =[100, 100,320*2,240*2];
       positionEtiquetas = [320*2+200,200];
       positiontituloS = [320*2+200,100];
