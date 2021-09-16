@@ -42,7 +42,7 @@ function setup() {
       tamañoB = 100;
       positionRect = [0,displayWidth+200 + 2*100,displayWidth,displayWidth]
       positionCam =[0, 100,displayWidth,displayWidth+100]
-      positionEtiquetas = [50,displayWidth+300 + 2*100];
+      positionEtiquetas = [50,displayWidth+300+2*100];
 
   } else {
       console.log("No es un dispositivo movil");
@@ -55,11 +55,10 @@ function setup() {
       positionCam =[100, 100,320*2,240*2];
       positionEtiquetas = [320*2+200,200];
     }
+  fill("#F0DB4F")
+  textSize(30)
+  titulo = text("Video",margen,100);
 
-  titulo = createP("Video");
-  titulo.position(margen,100);
-  titulo.style("background-color", "#F0DB4F");
-  titulo.style("font-size", "30px");
 
   //Creacion de la seccion de clasificacion
 
