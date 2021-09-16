@@ -40,7 +40,7 @@ function setup() {
       capture.hide();
       margen = 50;
       tamañoB = 100;
-      positionRect = [50,displayWidth+100 + 2*100,displayWidth-margen*2,displayWidth-margen*2]
+      positionRect = [0,displayWidth+200 + 2*100,displayWidth-margen*2,displayWidth]
       positionCam =[0, 100,displayWidth,displayWidth+100]
       positionEtiquetas = [50,displayWidth+100 + 2*100+50];
 
