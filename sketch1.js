@@ -154,8 +154,5 @@ function posicionar(){
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
   document.getElementById("despocicionar").onclick = despocicionar;
-  document.getElementById("posicionar").onclick = posicionar(){}
-
-
-;
+  document.getElementById("posicionar").onclick = posicionar;
 }
