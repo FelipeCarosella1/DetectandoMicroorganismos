@@ -40,7 +40,7 @@ function setup() {
       tamañoB = 100;
       positionRect = [50,displayWidth+100 + 2*100,displayWidth-margen*2,displayWidth-margen*2]
       positionCam =[0, 100,displayWidth,displayWidth+100]
-      positionEtiquetas = [50,displayHeight+50];
+      positionEtiquetas = [50,displayWidth+100 + 2*100+50];
 
   } else {
       console.log("No es un dispositivo movil");
