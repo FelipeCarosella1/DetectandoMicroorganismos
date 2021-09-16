@@ -55,16 +55,17 @@ function setup() {
       positionCam =[100, 100,320*2,240*2];
       positionEtiquetas = [320*2+200,200];
     }
-  fill("#F0DB4F")
-  textSize(30)
-  titulo = text("Video",margen,100);
+
+
 
 
   //Creacion de la seccion de clasificacion
 
   fill("#F0DB4F");
   seccion = rect(positionRect[0],positionRect[1],positionRect[2],positionRect[3]);
-
+  seccion = rect(margen,50,50,50);
+  textSize(30)
+  titulo = text("Video",margen,100);
   // Creacion botones para acciones
   boton1 = createButton('captura'); // crea boton de captura imagen
   boton1.position(displayWidth/2-tamañoB/2+tamañoB+10, positionCam[3] + 2*100); // posicion del boton 
