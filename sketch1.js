@@ -53,10 +53,10 @@ function setup() {
       positionCam =[100, 100,320*2,240*2];
       positionEtiquetas = [320*2+200,200];
     }
-  textSize(30)
-  textStyle("background-color: #F0DB4F;");
-  text("Video",margen,100);
-  
+
+  tituloVideo = text("Video",margen,100);
+  tituloVideo.setProperty("background-color", "#F0DB4F");
+  tituloVideo.setProperty("font-size", "30px");
 
   //Creacion de la seccion de clasificacion
  
