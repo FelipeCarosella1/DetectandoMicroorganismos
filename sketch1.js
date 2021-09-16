@@ -144,7 +144,7 @@ function gotResults(error, results){
 function despocicionar(){
   document.getElementById('despocicionar').id = 'posicionar';
   titulo.position(margen,200);
-
+}
 function posicionar(){
   document.getElementById('posicionar').id = 'despocicionar';
   titulo.position(margen,200);
@@ -156,6 +156,6 @@ function draw(){
   document.getElementById("despocicionar").onclick = despocicionar;
   document.getElementById("posicionar").onclick = posicionar(){}
 
-  
+
 ;
 }
