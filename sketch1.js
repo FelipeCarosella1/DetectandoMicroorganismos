@@ -43,7 +43,7 @@ function setup() {
       tamañoB = 100;
       positionRect = [0,displayWidth+450,displayWidth,displayWidth]
       positionCam =[0, 100,displayWidth,displayWidth+100]
-      positionEtiquetas1 = [50,displayWidth+300+2*100];
+      positionEtiquetas = [50,displayWidth+300+2*100];
       positiontituloS = [50,displayWidth+300+2*100];
   } else {
       console.log("No es un dispositivo movil");
@@ -54,7 +54,7 @@ function setup() {
       tamañoB = 300;
       positionRect = [320*2+200,150,displayWidth-(320*2+margen+100)-margen,240*2+50];
       positionCam =[100, 100,320*2,240*2];
-      positionEtiquetas1 = [320*2+200,200];
+      positionEtiquetas = [320*2+200,200];
       positiontituloS = [320*2+200,100,displayWidth-(320*2+margen+100)-margen,240*2-100];
 
   tituloV = createP("Video");
