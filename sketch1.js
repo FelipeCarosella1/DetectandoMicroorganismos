@@ -103,7 +103,7 @@ function setup() {
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
   classifyVideo();
-}
+}}
 
 //Funciones de botones
 function pausa() {
@@ -155,5 +155,4 @@ function windowResized() {
 //Mostramos la web cam
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
-
 }
