@@ -37,7 +37,7 @@ function setup() {
       capture.hide();
       margen = 50;
       tamañoB = 100;
-      positionRect = [0,displayWidth+400,displayWidth,300]
+      positionRect = [0,displayWidth+400,displayWidth,200]
       positionCam =[0, 100,displayWidth,displayWidth+100]
       positionEtiquetas = [50,displayWidth+450];
       positiontituloS = [50,displayWidth+400];
