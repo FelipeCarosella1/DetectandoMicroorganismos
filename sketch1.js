@@ -13,7 +13,6 @@ let nombre;
 let porcentaje;
 let nombreL;
 let porcentajeL;
-let contador = 1;
 
 
 function preload () {

@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClasificadorImagenes</title>
+  <meta name = "description" content="Bienidos a esta pagina, este es un clasificador de imagenes, con el cual podremos identificar si el agua esta limpia, si tiene microrganismos,o si tiene levadura">
+     <!-- color de la tipografia    -->
+  <meta name = "theme-color" content= "#F0DB4F">
+  <!-- bloque para mejor visualizacion en dispositivos mobiles -->
+  <meta name = "MobileOptimized" content = "width">
+  <meta name = "HandheldFriendly" content = "true">
+  <meta name = "apple-mobile-web-app-capable" content = "yes">
+  <meta name = "apple-mobile-web-app-status-bar-style" content = "black-translucent">
+  <!-- carga del icono para la WPA -->
+  <link rel = "shortcut icon" type = "image/png" href = "./icon.png">
+  <link rel = "apple-touch-icon" href = "./icon.png">
+  <link rel = "apple-touch-startup-image" href="./icon.png">
+  <!--Archivo manifest.json que se utiliza para crear una PWA-->
+  <link rel="manifest" href="./manifest.json">  
+  <script src="./script2.js"></script>
+
     <script src="p5.min.js"></script>
     <script src="p5.dom.min.js"></script>
     <script src="p5.sound.min.js"></script>
@@ -12,16 +31,17 @@
     <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 </head>
 <body>
-  <script src="sketch1.js"></script>
+  <!--  carga el service worker  -->
+  <script src="./script.js"></script>
   <style>
     video {
       display: none;
     }
   </style>
-
+  <script src="./sketch1.js"></script>
   <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #F0DB4F;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Más agua limpia más vida</a>
+    <a class="navbar-brand" href="./index.html">Más agua limpia más vida</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" id="tocar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,7 +51,7 @@
           <a class="nav-link disabled" href="#">Para que sirve</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Clasificar</a>
+          <a class="nav-link active" aria-current="page" href="./index.html">Clasificar</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Quienes somos</a>
