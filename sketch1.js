@@ -54,7 +54,7 @@ function setup() {
       positionEtiquetas = [320*2+200,200];
     }
 
-  titulo = createP("Clasificar");
+  titulo = createP("Video");
   titulo.position(margen,100);
   titulo.style("background-color", "#F0DB4F");
   titulo.style("font-size", "30px");
@@ -140,7 +140,7 @@ function gotResults(error, results){
 }
 
 function cerrar(){
-  titulo.hide();
+  titulo.position(margen,100+50);
 }
 
 //Mostramos la web cam
