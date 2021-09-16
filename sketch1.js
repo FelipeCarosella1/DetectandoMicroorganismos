@@ -37,10 +37,10 @@ function setup() {
       capture.hide();
       margen = 50;
       tamañoB = 100;
-      positionRect = [0,displayWidth+450,displayWidth,displayWidth]
+      positionRect = [0,displayWidth+400,displayWidth,displayWidth]
       positionCam =[0, 100,displayWidth,displayWidth+100]
       positionEtiquetas = [50,displayWidth+600];
-      positiontituloS = [50,displayWidth+500];
+      positiontituloS = [50,displayWidth+400];
       canvasSizes = [displayWidth, displayHeight+900]
   } else {
       console.log("No es un dispositivo movil");
@@ -69,7 +69,6 @@ function setup() {
   tituloS.style("font-size", "30px");
 
   //Creacion de la seccion de clasificacion
-
   fill("#F0DB4F");
   seccion = rect(positionRect[0],positionRect[1],positionRect[2],positionRect[3]);
 
@@ -146,11 +145,6 @@ function gotResults(error, results){
   porcentajeL.style("font-size", "25px");
   classifyVideo(); 
   }
-}
-
-function windowResized() {
-  resizeCanvas(canvasSizes[0], canvasSizes[1]);
-  background("#2B2B2B"); 
 }
 
 //Mostramos la web cam
