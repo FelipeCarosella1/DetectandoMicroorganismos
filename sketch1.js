@@ -22,8 +22,7 @@ function preload () {
 }
 
 function setup() {
-  document.getElementById("despocicionar").onclick = posicionar;
-  document.getElementById("posicionar").onclick = despocicionar;
+
   //Se crea el lienzo
   createCanvas(displayWidth, displayHeight+900); // crea un lienzo de pantalla completa
   background("#2B2B2B");  
@@ -155,3 +154,6 @@ function posicionar(){
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
 }
+  
+document.getElementById("despocicionar").onclick = posicionar;
+document.getElementById("posicionar").onclick = despocicionar;
