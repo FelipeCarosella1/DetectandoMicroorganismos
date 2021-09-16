@@ -4,6 +4,7 @@ let boton2;
 let boton3;
 var seccion;
 let titulo;
+let tituloS;
 let clasificador;
 var result;
 let margen;
@@ -23,7 +24,7 @@ function preload () {
 
 function setup() {
   //Se crea el lienzo
-  createCanvas(displayWidth, displayHeight+900); // crea un lienzo de pantalla completa
+  createCanvas(displayWidth, displayHeight+500); // crea un lienzo de pantalla completa
   background("#2B2B2B");  
 
   //Activa la camara frontal si es un dispositivo movil
@@ -40,10 +41,10 @@ function setup() {
       capture.hide();
       margen = 50;
       tamañoB = 100;
-      positionRect = [0,displayWidth+200 + 2*100,displayWidth,displayWidth]
+      positionRect = [0,displayWidth+450,displayWidth,displayWidth]
       positionCam =[0, 100,displayWidth,displayWidth+100]
-      positionEtiquetas = [50,displayWidth+300+2*100];
-
+      positionEtiquetas1 = [50,displayWidth+300+2*100];
+      positiontituloS = [50,displayWidth+300+2*100];
   } else {
       console.log("No es un dispositivo movil");
       capture = createCapture(VIDEO);
@@ -51,22 +52,26 @@ function setup() {
       result = false;
       margen = 100;
       tamañoB = 300;
-      positionRect = [320*2+200,100,displayWidth-(320*2+margen+100)-margen,240*2];
+      positionRect = [320*2+200,150,displayWidth-(320*2+margen+100)-margen,240*2+50];
       positionCam =[100, 100,320*2,240*2];
-      positionEtiquetas = [320*2+200,200];
-    }
+      positionEtiquetas1 = [320*2+200,200];
+      positiontituloS = [320*2+200,100,displayWidth-(320*2+margen+100)-margen,240*2-100];
 
+  tituloV = text("Video");
+  tituloV.position(margen,100);
+  tituloV.style("background-color", "#F0DB4F");
+  tituloV.style("font-size", "30px");
 
+  tituloS = text("Video");
+  tituloS.position(margen,100);
+  tituloS.style("background-color", "#F0DB4F");
+  tituloS.style("font-size", "30px");
 
 
   //Creacion de la seccion de clasificacion
 
   fill("#F0DB4F");
   seccion = rect(positionRect[0],positionRect[1],positionRect[2],positionRect[3]);
-  seccion = plane(50,50);
-
-  textSize(30)
-  titulo = text("Video",margen,100);
 
   // Creacion botones para acciones
   boton1 = createButton('captura'); // crea boton de captura imagen
@@ -143,16 +148,9 @@ function gotResults(error, results){
   }
 }
 
-function despocicionar(){
-  if(contador == 1){
-    titulo.position(margen,200);
-    contador = contador-1;
-  }else{
-    titulo.position(margen,100);
-    contador = contador + 1;
-  }
+function windowResized() {
+  resizeCanvas(displayWidth, displayHeight+500);
 }
-
 
 //Mostramos la web cam
 function draw(){
