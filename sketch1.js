@@ -60,7 +60,7 @@ function setup() {
   titulo.style("font-size", "30px");
 
   //Creacion de la seccion de clasificacion
-  
+
   fill("#F0DB4F");
   seccion = rect(positionRect[0],positionRect[1],positionRect[2],positionRect[3]);
 
@@ -137,10 +137,14 @@ function gotResults(error, results){
   porcentajeL.style("font-size", "25px");
   classifyVideo(); 
   }
-} 
+}
 
+function cerrar(){
+  titulo.hide();
+}
 
 //Mostramos la web cam
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
+  document.getElementById("tocar").onclick = cerrar;
 }
