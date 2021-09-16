@@ -45,6 +45,7 @@ function setup() {
       positionCam =[0, 100,displayWidth,displayWidth+100]
       positionEtiquetas = [50,displayWidth+300+2*100];
       positiontituloS = [50,displayWidth+300+2*100];
+      canvasSizes = [displayWidth, displayHeight+500]
   } else {
       console.log("No es un dispositivo movil");
       capture = createCapture(VIDEO);
@@ -56,6 +57,7 @@ function setup() {
       positionCam =[100, 100,320*2,240*2];
       positionEtiquetas = [320*2+200,200];
       positiontituloS = [320*2+200,100];
+      canvasSizes = [displayWidth, displayHeight]
 
   tituloV = createP("Video");
   tituloV.position(margen,100);
@@ -150,6 +152,7 @@ function gotResults(error, results){
 
 function windowResized() {
   resizeCanvas(displayWidth, displayHeight+500);
+  background("#2B2B2B"); 
 }
 
 //Mostramos la web cam
