@@ -147,7 +147,7 @@ function despocicionar(){
 }
 function posicionar(){
   document.getElementById('posicionar').id = 'despocicionar';
-  titulo.position(margen,200);
+  titulo.position(margen,100);
 }
 
 //Mostramos la web cam
