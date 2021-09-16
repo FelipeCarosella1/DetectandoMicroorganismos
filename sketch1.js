@@ -140,18 +140,17 @@ function gotResults(error, results){
 }
 
 function despocicionar(){
-  titulo.position(margen,200);
+  if contador == 1{
+    titulo.position(margen,100);
+    contador = contador-1;
+  }else{
+    titulo.position(margen,200);}
+    contador = contador + 1;
 }
 
-function posicionar(){
-  titulo.position(margen,100);
-}
 
 //Mostramos la web cam
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
   document.getElementById("tocar").onclick = despocicionar;
-  document.getElementById("pag1").onclick = posicionar;
-  document.getElementById("pag2").onclick = posicionar;
-  document.getElementById("pag3").onclick = posicionar;
 }
