@@ -12,6 +12,7 @@ let nombre;
 let porcentaje;
 let nombreL;
 let porcentajeL;
+let contador;
 
 function preload () {
   // cargamos el link donde se encuentra nuestro modelo pre entrehado por Teachable Machine 
@@ -140,7 +141,7 @@ function gotResults(error, results){
 }
 
 function despocicionar(){
-  if contador == 1{
+  if(contador == 1){
     titulo.position(margen,100);
     contador = contador-1;
   }else{
