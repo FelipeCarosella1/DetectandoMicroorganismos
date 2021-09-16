@@ -55,8 +55,8 @@ function setup() {
     }
 
   tituloVideo = text("Video",margen,100);
-  tituloVideo.setProperty("background-color", "#F0DB4F");
-  tituloVideo.setProperty("font-size", "30px");
+  tituloVideo.setProperty("style","background-color:#F0DB4F;");
+  tituloVideo.setAttribute("font-size", "30px");
 
   //Creacion de la seccion de clasificacion
  
