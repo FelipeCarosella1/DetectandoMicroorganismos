@@ -91,7 +91,7 @@ function setup() {
  // comienza la clasificacion
   nombreL = createP("Nombre: ");
   porcentajeL = createP("Porcentaje: "); // muestra el % de asierto
-  nombreL.position(positionEtiquetas[0],positionEtiquetas[1])
+  nombreL.position(positionEtiquetas[0],positionEtiquetas[1]);
   porcentajeL.position(positionEtiquetas[0], positionEtiquetas[1]+100);
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
@@ -155,5 +155,5 @@ function despocicionar(){
 //Mostramos la web cam
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
-  document.getElementById("tocar").onclick = despocicionar;
+
 }
