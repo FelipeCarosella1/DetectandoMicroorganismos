@@ -65,7 +65,7 @@ function setup() {
   seccion = rect(positionRect[0],positionRect[1],positionRect[2],positionRect[3]);
   seccion = rect(margen,50,50,50);
   strokeWeight(5);
-  erase(150, 255 );
+  erase(150, 255);
   textSize(30)
   titulo = text("Video",margen,100);
   noErase();
