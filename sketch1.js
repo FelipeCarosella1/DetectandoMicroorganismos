@@ -41,7 +41,7 @@ function setup() {
       positionCam =[0, 100,displayWidth,displayWidth+100]
       positionEtiquetas = [50,displayWidth+450];
       positiontituloS = [50,displayWidth+400];
-      canvasSizes = [displayWidth, displayHeight+900]
+      canvasSizes = [displayWidth, displayHeight+600]
   } else {
       console.log("No es un dispositivo movil");
       capture = createCapture(VIDEO);
