@@ -62,8 +62,8 @@ function setup() {
   tituloV.style("background-color", "#F0DB4F");
   tituloV.style("font-size", "30px");
 
-  tituloS = text("Video");
-  tituloS.position(margen,100);
+  tituloS = text("Clasificación");
+  tituloS.position(positiontituloS[0],positiontituloS[1]);
   tituloS.style("background-color", "#F0DB4F");
   tituloS.style("font-size", "30px");
 
