@@ -150,7 +150,7 @@ function gotResults(error, results){
 }
 
 function windowResized() {
-  resizeCanvas(displayWidth, displayHeight+500);
+  resizeCanvas(canvasSizes[0], canvasSizes[1]);
   background("#2B2B2B"); 
 }
 
