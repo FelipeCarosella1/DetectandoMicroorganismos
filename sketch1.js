@@ -54,12 +54,12 @@ function setup() {
       positionEtiquetas = [320*2+200,200];
     }
 
-  titulo = createP("Clasificar");
-  titulo.position(margen,100);
-  titulo.style("background-color", "#F0DB4F");
-  titulo.style("font-size", "30px");
+  tituloVideo = text("Video",margen,100);
+  tituloVideo.style("background-color", "#F0DB4F");
+  tituloVideo.style("font-size", "30px");
 
   //Creacion de la seccion de clasificacion
+ 
   fill("#F0DB4F");
   seccion = rect(positionRect[0],positionRect[1],positionRect[2],positionRect[3]);
 
