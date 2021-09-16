@@ -4,7 +4,6 @@ const CACHE_NAME = 'v1_cache_programador_fitness',
   urlsToCache = [
     './',
     './script.js',
-    './script2.js'.
     './sketch1.js',
     './icon.png'
   ]
