@@ -23,10 +23,6 @@ function preload () {
 }
 
 function setup() {
-  //Se crea el lienzo
-  createCanvas(displayWidth, displayHeight+500); // crea un lienzo de pantalla completa
-  background("#2B2B2B");  
-
   //Activa la camara frontal si es un dispositivo movil
     if (isMobileDevice()) {
       console.log("Es un dispositivo movil");
@@ -43,8 +39,8 @@ function setup() {
       tamañoB = 100;
       positionRect = [0,displayWidth+450,displayWidth,displayWidth]
       positionCam =[0, 100,displayWidth,displayWidth+100]
-      positionEtiquetas = [50,displayWidth+300+2*100];
-      positiontituloS = [50,displayWidth+300+2*100];
+      positionEtiquetas = [50,displayWidth+500];
+      positiontituloS = [50,displayWidth+500];
       canvasSizes = [displayWidth, displayHeight+500]
   } else {
       console.log("No es un dispositivo movil");
@@ -55,9 +51,13 @@ function setup() {
       tamañoB = 300;
       positionRect = [320*2+200,100,displayWidth-(320*2+margen+100)-margen,240*2];
       positionCam =[100, 100,320*2,240*2];
-      positionEtiquetas = [320*2+200,200];
+      positionEtiquetas = [320*2+250,200];
       positiontituloS = [320*2+200,100];
       canvasSizes = [displayWidth, displayHeight]
+  //Se crea el lienzo
+
+  createCanvas(canvasSizes[0], canvasSizes[1]); // crea un lienzo de pantalla completa
+  background("#2B2B2B");  
 
   tituloV = createP("Video");
   tituloV.position(margen,100);
@@ -68,7 +68,6 @@ function setup() {
   tituloS.position(positiontituloS[0],positiontituloS[1]);
   tituloS.style("background-color", "#F0DB4F");
   tituloS.style("font-size", "30px");
-
 
   //Creacion de la seccion de clasificacion
 
