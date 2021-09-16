@@ -63,12 +63,11 @@ function setup() {
 
   fill("#F0DB4F");
   seccion = rect(positionRect[0],positionRect[1],positionRect[2],positionRect[3]);
-  seccion = rect(margen,50,50,50);
-  strokeWeight(5);
-  erase(150, 255);
+  seccion = plane(50,50,margen,50);
+
   textSize(30)
   titulo = text("Video",margen,100);
-  noErase();
+
   // Creacion botones para acciones
   boton1 = createButton('captura'); // crea boton de captura imagen
   boton1.position(displayWidth/2-tamañoB/2+tamañoB+10, positionCam[3] + 2*100); // posicion del boton 
