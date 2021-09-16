@@ -39,7 +39,7 @@ function setup() {
       tamañoB = 100;
       positionRect = [0,displayWidth+400,displayWidth,200]
       positionCam =[0, 100,displayWidth,displayWidth+100]
-      positionEtiquetas = [50,displayWidth+450];
+      positionEtiquetas = [50,displayWidth+500];
       positiontituloS = [50,displayWidth+400];
       canvasSizes = [displayWidth, displayHeight+600]
   } else {
