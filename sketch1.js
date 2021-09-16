@@ -22,10 +22,10 @@ function preload () {
 }
 
 function setup() {
-
   //Se crea el lienzo
   createCanvas(displayWidth, displayHeight+900); // crea un lienzo de pantalla completa
   background("#2B2B2B");  
+
   //Activa la camara frontal si es un dispositivo movil
     if (isMobileDevice()) {
       console.log("Es un dispositivo movil");
@@ -92,7 +92,7 @@ function setup() {
   nombreL = createP("Nombre: ");
   porcentajeL = createP("Porcentaje: "); // muestra el % de asierto
   nombreL.position(positionEtiquetas[0],positionEtiquetas[1])
-  porcentajeL.position(positionEtiquetas[0],positionEtiquetas[1]+100);
+  porcentajeL.position(positionEtiquetas[0], positionEtiquetas[1]+100);
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
   classifyVideo();
@@ -142,18 +142,18 @@ function gotResults(error, results){
 }
 
 function despocicionar(){
-  document.getElementById('despocicionar').id = 'posicionar';
-  titulo.position(margen,200);
+  if(contador == 1){
+    titulo.position(margen,200);
+    contador = contador-1;
+  }else{
+    titulo.position(margen,100);
+    contador = contador + 1;
+  }
 }
-function posicionar(){
-  document.getElementById('posicionar').id = 'despocicionar';
-  titulo.position(margen,100);
-}
+
 
 //Mostramos la web cam
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
+  document.getElementById("tocar").onclick = despocicionar;
 }
-  
-document.getElementById("despocicionar").onclick = posicionar;
-document.getElementById("posicionar").onclick = despocicionar;
