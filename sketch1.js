@@ -142,10 +142,10 @@ function gotResults(error, results){
 
 function despocicionar(){
   if(contador == 1){
-    titulo.position(margen,100);
+    titulo.position(margen,200);
     contador = contador-1;
   }else{
-    titulo.position(margen,200);}
+    titulo.position(margen,100);}
     contador = contador + 1;
 }
 
