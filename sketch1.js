@@ -57,12 +57,12 @@ function setup() {
       positionEtiquetas1 = [320*2+200,200];
       positiontituloS = [320*2+200,100,displayWidth-(320*2+margen+100)-margen,240*2-100];
 
-  tituloV = text("Video");
+  tituloV = createP("Video");
   tituloV.position(margen,100);
   tituloV.style("background-color", "#F0DB4F");
   tituloV.style("font-size", "30px");
 
-  tituloS = text("Clasificación");
+  tituloS = createP("Clasificación");
   tituloS.position(positiontituloS[0],positiontituloS[1]);
   tituloS.style("background-color", "#F0DB4F");
   tituloS.style("font-size", "30px");
