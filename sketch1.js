@@ -37,11 +37,11 @@ function setup() {
       capture.hide();
       margen = 50;
       tamañoB = 100;
-      positionRect = [0,displayWidth+300,displayWidth,230]
+      positionRect = [0,displayWidth+200,displayWidth,230]
       positionCam =[0, 0,displayWidth,displayWidth+100]
-      positionEtiquetas = [50,displayWidth+500];
+      positionEtiquetas = [50,displayWidth+300];
       positiontituloS = [50,displayWidth+300];
-      canvasSizes = [displayWidth, displayHeight+500]
+      canvasSizes = [displayWidth, displayHeight+300]
       positionBotonY = displayWidth+100;
   } else {
       console.log("No es un dispositivo movil");
