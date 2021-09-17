@@ -73,21 +73,21 @@ function setup() {
 
   // Creacion botones para acciones
   boton1 = createButton('captura'); // crea boton de captura imagen
-  boton1.position(displayWidth/2-tamañoB/2+tamañoB+10, positionCam[3] + 2*100); // posicion del boton 
+  boton1.position(displayWidth/2-tamañoB/2+tamañoB+10, positionCam[3] + 100); // posicion del boton 
   boton1.size(tamañoB);
   boton1.style("background-color: #F0DB4F");
   boton1.class("btn")
   boton1.mousePressed(capturarimagen); // accion al precionar el boton 
 
   boton2 = createButton('pausa'); // crea boton de captura imagen
-  boton2.position(displayWidth/2-tamañoB/2, positionCam[3] + 2*100); // posicion del boton
+  boton2.position(displayWidth/2-tamañoB/2, positionCam[3] + 100); // posicion del boton
   boton2.size(tamañoB);
   boton2.style("background-color: #F0DB4F");
   boton2.class("btn btn-warning")
   boton2.mousePressed(pausa); // accion al precionar el boton 
 
   boton3 = createButton('continuar'); // crea boton de captura imagen
-  boton3.position(displayWidth/2-tamañoB/2-tamañoB-10, positionCam[3] + 2*100 ); // posicion del boton
+  boton3.position(displayWidth/2-tamañoB/2-tamañoB-10, positionCam[3] + 100 ); // posicion del boton
   boton3.size(tamañoB);
   boton3.style("background-color: #F0DB4F");
   boton3.class("btn")
