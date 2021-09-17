@@ -40,7 +40,7 @@ function setup() {
       positionRect = [0,displayWidth+200,displayWidth,230]
       positionCam =[0, 0,displayWidth,displayWidth+100]
       positionEtiquetas = [50,displayWidth+300];
-      positiontituloS = [50,displayWidth+300];
+      positiontituloS = [50,displayWidth+200];
       canvasSizes = [displayWidth, displayHeight+300]
       positionBotonY = displayWidth+100;
   } else {
