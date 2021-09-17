@@ -79,7 +79,7 @@ function setup() {
   boton1.class("btn")
   boton1.mousePressed(capturarimagen); // accion al precionar el boton 
 
-  boton2 = createButton('pausa'); // crea boton de captura imagen
+  boton2 = createButton('Clasificar'); // crea boton de captura imagen
   boton2.position(displayWidth/2-tamañoB/2, positionCam[3] + 100); // posicion del boton
   boton2.size(tamañoB);
   boton2.style("background-color: #F0DB4F");
@@ -100,12 +100,12 @@ function setup() {
   porcentajeL.position(positionEtiquetas[0], positionEtiquetas[1]+100);
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
-  classifyVideo();
 }
 
 //Funciones de botones
 function pausa() {
     capture.stop(); // pausa el video
+    classifyVideo();
 }
 
 function continuar() {
@@ -142,7 +142,6 @@ function gotResults(error, results){
   porcentajeL.position(positionEtiquetas[0], positionEtiquetas[1]+100);
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
-  classifyVideo(); 
   }
 }
 
