@@ -57,7 +57,7 @@ function setup() {
       positionBotonY = 240*2+2*100;
       tituloV = createP("Video");
       tituloV.position(margen,100);
-      tituloV.style("background-color", "#F6E4D3");
+      tituloV.style("background-color", "#F1D7BE");
       tituloV.style("font-size", "30px");
   }
   //Se crea el lienzo
@@ -66,32 +66,32 @@ function setup() {
 
   tituloS = createP("Clasificación");
   tituloS.position(positiontituloS[0],positiontituloS[1]);
-  tituloS.style("background-color", "#F6E4D3");
+  tituloS.style("background-color", "#F1D7BE");
   tituloS.style("font-size", "30px");
 
   //Creacion de la seccion de clasificacion
-  fill("#F0DB4F");
+  fill("#F1D7BE");
   seccion = rect(positionRect[0],positionRect[1],positionRect[2],positionRect[3]);
 
   // Creacion botones para acciones
   boton1 = createButton('captura'); // crea boton de captura imagen
   boton1.position(displayWidth/2-tamañoB/2+tamañoB+10,positionBotonY); // posicion del boton 
   boton1.size(tamañoB);
-  boton1.style("background-color: #F6E4D3");
+  boton1.style("background-color: #F1D7BE");
   boton1.class("btn")
   boton1.mousePressed(capturarimagen); // accion al precionar el boton 
 
   boton2 = createButton('Clasificar'); // crea boton de captura imagen
   boton2.position(displayWidth/2-tamañoB/2, positionBotonY); // posicion del boton
   boton2.size(tamañoB);
-  boton2.style("background-color: #F6E4D3");
+  boton2.style("background-color: #F1D7BE");
   boton2.class("btn btn-warning")
   boton2.mousePressed(pausa); // accion al precionar el boton 
 
   boton3 = createButton('continuar'); // crea boton de captura imagen
   boton3.position(displayWidth/2-tamañoB/2-tamañoB-10, positionBotonY); // posicion del boton
   boton3.size(tamañoB);
-  boton3.style("background-color: #F6E4D3");
+  boton3.style("background-color: #F1D7BE");
   boton3.class("btn")
   boton3.mousePressed(continuar); // accion al precionar el boton
 
