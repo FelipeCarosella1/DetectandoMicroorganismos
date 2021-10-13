@@ -2,6 +2,8 @@ var capture;
 let boton1;
 let boton2;
 let boton3;
+let boton4;
+let boton5;
 var seccion;
 let titulo;
 let tituloS;
