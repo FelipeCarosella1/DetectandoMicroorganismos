@@ -15,8 +15,6 @@ let nombreL;
 let porcentajeL;
 var lati; // variable de latitud
 var long; // variable de longitud
-let canvas;
-let myMap;
 let datos; // variable que almacena los datos del archivo CSV
 let imagen;
 let lat;

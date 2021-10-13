@@ -18,25 +18,8 @@ function preload() {
 }
 
 function setup() {
-    canvas = createCanvas(displayWidth,displayHeight); // crea el linezo de 200x200}
-    rectangulo = rect(0,0,100,100)
-    if('geolocation' in navigator) {
-        /* geolocation is available */
-        console.log('geolocation funcionando');
-        // getCurrentPosition() se usa para obtener la posicion de un dispositivo 
-        navigator.geolocation.getCurrentPosition(async position => {
-            // console.log(position);
-            lati = position.coords.latitude; // obtenemos latitud
-            long = position.coords.longitude; // obtenermos longitud
-            gurdar(lati,long)
-            });
-    } else {
-        /* geolocation IS NOT available */
-        console.log('geolocation NO funcionando');
-        console.log(leerDatos())
-    };
     initMap()
-    }
+}
 
 function initMap(){
     const mappa = new Mappa('Leaflet');;
