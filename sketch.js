@@ -65,7 +65,7 @@ function setup() {
       positionCam =[100, 100,320*2,240*2];
       positionEtiquetas = [320*2+250,200];
       positiontituloS = [320*2+200,100];
-      canvasSizes = [displayWidth, displayHeight+100]
+      canvasSizes = [displayWidth, displayHeight+50]
       positionBotonY = 240*2+2*100;
       tituloV = createP("Video");
       tituloV.position(margen,100);
