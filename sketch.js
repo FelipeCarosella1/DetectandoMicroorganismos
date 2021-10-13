@@ -49,7 +49,7 @@ function setup() {
       capture.hide();
       margen = 50;
       tamañoB = 100;
-      positionRect = [0,displayWidth+300,displayWidth,430]
+      positionRect = [0,displayWidth+300,displayWidth,330]
       positionCam =[0, 0,displayWidth,displayWidth+100]
       positionEtiquetas = [50,displayWidth+400];
       positiontituloS = [50,displayWidth+300];
@@ -111,13 +111,13 @@ function setup() {
   nombreL = createP("Nombre: ");
   porcentajeL = createP("Porcentaje: "); // muestra el % de asierto
   nombreL.position(positionEtiquetas[0],positionEtiquetas[1]);
-  porcentajeL.position(positionEtiquetas[0], positionEtiquetas[1]+100);
+  porcentajeL.position(positionEtiquetas[0], positionEtiquetas[1]+50);
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
   cordenadaX = createP("Latitud: ");
   cordenadaY = createP("Longitud: ");
-  cordenadaX.position(positionEtiquetas[0],positionEtiquetas[1]+200); 
-  cordenadaY.position(positionEtiquetas[0],positionEtiquetas[1]+300); 
+  cordenadaX.position(positionEtiquetas[0],positionEtiquetas[1]+100); 
+  cordenadaY.position(positionEtiquetas[0],positionEtiquetas[1]+150); 
   cordenadaX.style("font-size", "25px"); // fija el tamaño del texto
   cordenadaY.style("font-size", "26px"); // fija el tamaño del texto
   if('geolocation' in navigator) {
