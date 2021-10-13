@@ -13,8 +13,15 @@ let nombre;
 let porcentaje;
 let nombreL;
 let porcentajeL;
-let lati;
-let long;
+var lati; // variable de latitud
+var long; // variable de longitud
+let canvas;
+let myMap;
+let datos; // variable que almacena los datos del archivo CSV
+let imagen;
+let lat;
+let lon;
+let img;
 let cordenadaX;
 let cordenadaY;
 
