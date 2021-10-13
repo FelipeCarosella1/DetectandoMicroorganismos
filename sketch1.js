@@ -24,6 +24,7 @@ function preload () {
   // cargamos el link donde se encuentra nuestro modelo pre entrehado por Teachable Machine 
   // model.json contiene la arquitectura del modelo utilizada por la biblioteca TensorFlow.js  
   clasificador = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/y8n73XnCI/'+ 'model.json');
+  datos = loadTable("cordenadas.csv", "csv", "header"); // almacenamos los datos en la variable
 }
 
 function setup() {
@@ -128,7 +129,6 @@ function setup() {
             cordenadaY.position(positionEtiquetas[0],positionEtiquetas[1]+300); 
             cordenadaX.style("font-size", "25px"); // fija el tamaño del texto
             cordenadaY.style("font-size", "26px"); // fija el tamaño del texto  
-            gurdar(lati,long);
             });
     } else {
         /* geolocation IS NOT available */
