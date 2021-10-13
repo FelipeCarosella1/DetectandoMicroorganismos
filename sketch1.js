@@ -19,6 +19,7 @@ function preload() {
 
 function setup() {
     initMap()
+    canvas = createCanvas(displayWidth,displayHeight);
 }
 
 function initMap(){
