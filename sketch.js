@@ -140,7 +140,20 @@ function setup() {
         console.log('geolocation NO funcionando');
         console.log(leerDatos())
     };
+  boton4 = createButton('continuar'); // crea boton de captura imagen
+  boton4.position(displayWidth/2-tamañoB-10, positionBotonY+100); // posicion del boton
+  boton4.size(tamañoB);
+  boton4.style("background-color: #F1D7BE");
+  boton4.class("btn")
+  boton4.mousePressed(continuar);
+  boton5 = createButton('Cargar Cordenadas'); // crea boton de captura imagen
+  boton5.position(displayWidth/2+tamañoB+10, positionBotonY+100); // posicion del boton
+  boton5.size(tamañoB);
+  boton5.style("background-color: #F1D7BE");
+  boton5.class("btn")
+  boton5.mousePressed(cargarCordenadas); 
   }
+
 
 //Funciones de botones
 function pausa() {
@@ -185,10 +198,9 @@ function gotResults(error, results){
   }
 }
 
-
-function gurdar(lati,long){
+function cargarCordenadas(){
 let table;
-let newRow
+let newRow;
 table = new p5.Table();
 table.addColumn('lat');
 table.addColumn('lon');
