@@ -18,8 +18,8 @@ function preload() {
 }
 
 function setup() {
-    initMap()
-    canvas = createCanvas(displayWidth,displayHeight);
+  canvas = createCanvas(displayWidth,displayHeight);
+  initMap();
 }
 
 function initMap(){
