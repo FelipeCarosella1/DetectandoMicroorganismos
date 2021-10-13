@@ -156,7 +156,6 @@ function setup() {
   boton5.mousePressed(cargarCordenadas); 
   }
 
-
 //Funciones de botones
 function pausa() {
     capture.stop(); // pausa el video
@@ -226,9 +225,10 @@ newRow.setString('img', "agua_enojada.jpg");
 saveTable(table, 'cordenadas.csv');
 }
 
-function verMapa{
+function verMapa(){
   window.location.href = "./index1.html"
 }
+
 //Mostramos la web cam
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
