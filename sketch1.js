@@ -51,29 +51,3 @@ function marcador(){
         image(imagen,marcador.x,marcador.y,35,35);        
     }
 }
-
-function gurdar(lati,long){
-    let table;
-    let newRow
-    table = new p5.Table();
-    table.addColumn('lat');
-    table.addColumn('lon');
-    table.addColumn('img');
-    let numRows = datos.getRowCount(); // almacena las filas como datos
-    // almacenamos altitud y longitus en una matriz
-    lat = datos.getColumn("lat"); // usamos el nombre que figura en al tabla exel CSV
-    lon = datos.getColumn("lon"); // usamos el nombre que figura en la tabla exel CSV 
-    img = datos.getColumn("img"); // usamos el nombre que figura en al tabla exel CSV
-    // ciclo repetitivo que recorra todos los datos desde 0 hasta el valor de menor de filas 
-    for (let i = 0; i < numRows; i++) {
-        newRow = table.addRow();
-        newRow.setNum('lat', lat[i]);
-        newRow.setNum('lon', lon[i]);
-        newRow.setString('img', img[i]);
-    }
-    newRow = table.addRow();
-    newRow.setNum('lat', lati);
-    newRow.setNum('lon', long);
-    newRow.setString('img', "agua_enojada.jpg");
-    saveTable(table, 'cordenadas.csv');
-}

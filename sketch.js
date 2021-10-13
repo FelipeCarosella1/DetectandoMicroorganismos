@@ -49,10 +49,10 @@ function setup() {
       capture.hide();
       margen = 50;
       tamañoB = 100;
-      positionRect = [0,displayWidth+200,displayWidth,230]
+      positionRect = [0,displayWidth+200,displayWidth,280]
       positionCam =[0, 0,displayWidth,displayWidth+100]
-      positionEtiquetas = [50,displayWidth+300];
-      positiontituloS = [50,displayWidth+200];
+      positionEtiquetas = [50,displayWidth+350];
+      positiontituloS = [50,displayWidth+250];
       canvasSizes = [displayWidth, displayHeight+300]
       positionBotonY = displayWidth+100;
   } else {
