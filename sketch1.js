@@ -13,6 +13,10 @@ let nombre;
 let porcentaje;
 let nombreL;
 let porcentajeL;
+let lati;
+let long;
+let cordenadaX;
+let cordenadaY;
 
 
 
@@ -102,7 +106,37 @@ function setup() {
   porcentajeL.position(positionEtiquetas[0], positionEtiquetas[1]+100);
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
-}
+  cordenadaX = createP("Latitud: ");
+  cordenadaY = createP("Longitud: ");
+  cordenadaX.position(positionEtiquetas[0],positionEtiquetas[1]+200); 
+  cordenadaY.position(positionEtiquetas[0],positionEtiquetas[1]+300); 
+  cordenadaX.style("font-size", "25px"); // fija el tamaño del texto
+  cordenadaY.style("font-size", "26px"); // fija el tamaño del texto
+  if('geolocation' in navigator) {
+        /* geolocation is available */
+        console.log('geolocation funcionando');
+        // getCurrentPosition() se usa para obtener la posicion de un dispositivo 
+        navigator.geolocation.getCurrentPosition(async position => {
+            // console.log(position);
+            lati = position.coords.latitude; // obtenemos latitud
+            long = position.coords.longitude; // obtenermos longitud
+            cordenadaX.hide()
+            cordenadaY.hide()
+            cordenadaX = createP("Latitud: "+lati);
+            cordenadaY = createP("Longitud: "+long);
+            cordenadaX.position(positionEtiquetas[0],positionEtiquetas[1]+200); 
+            cordenadaY.position(positionEtiquetas[0],positionEtiquetas[1]+300); 
+            cordenadaX.style("font-size", "25px"); // fija el tamaño del texto
+            cordenadaY.style("font-size", "26px"); // fija el tamaño del texto  
+            gurdar(lati,long);
+            });
+    } else {
+        /* geolocation IS NOT available */
+        console.log('geolocation NO funcionando');
+        console.log(leerDatos())
+    };
+  initMap()
+  }
 
 //Funciones de botones
 function pausa() {
@@ -150,4 +184,46 @@ function gotResults(error, results){
 //Mostramos la web cam
 function draw(){
   image(capture,positionCam[0],positionCam[1],positionCam[2],positionCam[3]);
+}
+
+function marcador(){
+    clear()
+    let numRows = datos.getRowCount(); // almacena las filas como datos
+    // almacenamos altitud y longitus en una matriz
+    lat = datos.getColumn("lat"); // usamos el nombre que figura en al tabla exel CSV
+    lon = datos.getColumn("lon"); // usamos el nombre que figura en la tabla exel CSV 
+    img = datos.getColumn("img"); // usamos el nombre que figura en al tabla exel CSV
+    // ciclo repetitivo que recorra todos los datos desde 0 hasta el valor de menor de filas 
+    for (let i = 0; i < numRows; i++) {
+        imagen=createImg(img[i]);
+        imagen.hide();
+        let marcador = myMap.latLngToPixel(lat[i],lon[i]);
+        image(imagen,marcador.x,marcador.y,35,35);        
+    }
+}
+
+function gurdar(lati,long){
+  let table;
+  let newRow
+  table = new p5.Table();
+  table.addColumn('lat');
+  table.addColumn('lon');
+  table.addColumn('img');
+  let numRows = datos.getRowCount(); // almacena las filas como datos
+  // almacenamos altitud y longitus en una matriz
+  lat = datos.getColumn("lat"); // usamos el nombre que figura en al tabla exel CSV
+  lon = datos.getColumn("lon"); // usamos el nombre que figura en la tabla exel CSV 
+  img = datos.getColumn("img"); // usamos el nombre que figura en al tabla exel CSV
+  // ciclo repetitivo que recorra todos los datos desde 0 hasta el valor de menor de filas 
+  for (let i = 0; i < numRows; i++) {
+      newRow = table.addRow();
+      newRow.setNum('lat', lat[i]);
+      newRow.setNum('lon', lon[i]);
+      newRow.setString('img', img[i]);
+  }
+  newRow = table.addRow();
+  newRow.setNum('lat', lati);
+  newRow.setNum('lon', long);
+  newRow.setString('img', "agua_enojada.jpg");
+  saveTable(table, 'cordenadas.csv');
 }
