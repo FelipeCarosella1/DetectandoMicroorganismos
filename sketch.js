@@ -143,14 +143,14 @@ function setup() {
         console.log(leerDatos())
     };
   boton4 = createButton('Ver Mapa'); // crea boton de captura imagen
-  boton4.position(displayWidth/2-tamañoB-80-10, positionBotonY+100); // posicion del boton
-  boton4.size(tamañoB+80);
+  boton4.position(displayWidth/2-tamañoB-70-10, positionBotonY+100); // posicion del boton
+  boton4.size(tamañoB+70);
   boton4.style("background-color: #F1D7BE");
   boton4.class("btn")
   boton4.mousePressed(verMapa);
   boton5 = createButton('Cargar Cordenadas'); // crea boton de captura imagen
   boton5.position(displayWidth/2+10, positionBotonY+100); // posicion del boton
-  boton5.size(tamañoB+80);
+  boton5.size(tamañoB+70);
   boton5.style("background-color: #F1D7BE");
   boton5.class("btn")
   boton5.mousePressed(cargarCordenadas); 
