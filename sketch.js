@@ -222,7 +222,7 @@ function cargarCordenadas(){
             newRow.setNum('lat', lat[i]);
             newRow.setNum('lon', lon[i]);
             newRow.setString('img', img[i]);
-  }else{
+  }}else{
     if (cargarClasiificacion==true){
       window.alert('Para poder cargar tus cordenadas debes activar tu ubicacion en tu dispositivo.')
     }else{
