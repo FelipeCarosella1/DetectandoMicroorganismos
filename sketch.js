@@ -222,12 +222,13 @@ function cargarCordenadas(){
             newRow.setNum('lat', lat[i]);
             newRow.setNum('lon', lon[i]);
             newRow.setString('img', img[i]);
+        }
         newRow = table.addRow();
         newRow.setNum('lat', lati);
         newRow.setNum('lon', long);
         newRow.setString('img', "agua_enojada.jpg");
         saveTable(table, 'cordenadas.csv');
-    }}else{
+    }else{
     if (cargarClasiificacion==true){
       window.alert('Para poder cargar tus cordenadas con tu clasificacion debes activar tu ubicacion en tu dispositivo y refrescar la pagina.')
     }else{
