@@ -204,7 +204,7 @@ function gotResults(error, results){
 }
 
 function cargarCordenadas(){
-    if (cargarCordenadas==true and cargarClasiificacion==true){
+    if (cargarCordenadas==true & cargarClasiificacion==true){
         let table;
         let newRow;
         table = new p5.Table();
