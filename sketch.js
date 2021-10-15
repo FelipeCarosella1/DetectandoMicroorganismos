@@ -222,20 +222,21 @@ function cargarCordenadas(){
             newRow.setNum('lat', lat[i]);
             newRow.setNum('lon', lon[i]);
             newRow.setString('img', img[i]);
-  }}else{
+        newRow = table.addRow();
+        newRow.setNum('lat', lati);
+        newRow.setNum('lon', long);
+        newRow.setString('img', "agua_enojada.jpg");
+        saveTable(table, 'cordenadas.csv');
+    }}else{
     if (cargarClasiificacion==true){
-      window.alert('Para poder cargar tus cordenadas debes activar tu ubicacion en tu dispositivo.')
+      window.alert('Para poder cargar tus cordenadas con tu clasificacion debes activar tu ubicacion en tu dispositivo y refrescar la pagina.')
     }else{
       if (cargarCordenadas==true){
-        window.alert('Para poder cargar tus cordenadas debes hacer una clasificacion.')
+        window.alert('Para poder cargar tus cordenadas con tu clasificacion debes hacer una clasificacion.')
+    }else{
+      window.alert('Para poder cargar tus cordenadas con tu clasificacion debes activar tu ubicacion en tu dispositivo y refrescar la pagina. Y luego debes hacer una clasificacion.')
     }
   }
-}
-newRow = table.addRow();
-newRow.setNum('lat', lati);
-newRow.setNum('lon', long);
-newRow.setString('img', "agua_enojada.jpg");
-saveTable(table, 'cordenadas.csv');
 }
 
 function verMapa(){
