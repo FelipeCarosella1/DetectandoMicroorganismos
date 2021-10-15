@@ -237,6 +237,7 @@ function cargarCordenadas(){
       window.alert('Para poder cargar tus cordenadas con tu clasificacion debes activar tu ubicacion en tu dispositivo y refrescar la pagina. Y luego debes hacer una clasificacion.')
     }
   }
+  }
 }
 
 function verMapa(){
