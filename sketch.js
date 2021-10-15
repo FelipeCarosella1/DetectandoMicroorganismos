@@ -24,6 +24,8 @@ let lon;
 let img;
 let cordenadaX;
 let cordenadaY;
+let cargadoCordenadas = false;
+let cargarClasiificacion = false;
 
 
 
@@ -135,7 +137,8 @@ function setup() {
             cordenadaX.position(positionEtiquetas[0],positionEtiquetas[1]+200); 
             cordenadaY.position(positionEtiquetas[0],positionEtiquetas[1]+300); 
             cordenadaX.style("font-size", "25px"); // fija el tamaño del texto
-            cordenadaY.style("font-size", "26px"); // fija el tamaño del texto  
+            cordenadaY.style("font-size", "26px"); // fija el tamaño del texto 
+            cargarCordenadas = true
             });
     } else {
         /* geolocation IS NOT available */
@@ -143,14 +146,14 @@ function setup() {
         console.log(leerDatos())
     };
   boton4 = createButton('Ver Mapa'); // crea boton de captura imagen
-  boton4.position(displayWidth/2-tamañoB-70-10, positionBotonY+100); // posicion del boton
-  boton4.size(tamañoB+70);
+  boton4.position(displayWidth/2-tamañoB-65-10, positionBotonY+100); // posicion del boton
+  boton4.size(tamañoB+65);
   boton4.style("background-color: #F1D7BE");
   boton4.class("btn")
   boton4.mousePressed(verMapa);
   boton5 = createButton('Cargar Cordenadas'); // crea boton de captura imagen
   boton5.position(displayWidth/2+10, positionBotonY+100); // posicion del boton
-  boton5.size(tamañoB+70);
+  boton5.size(tamañoB+65);
   boton5.style("background-color: #F1D7BE");
   boton5.class("btn")
   boton5.mousePressed(cargarCordenadas); 
@@ -196,27 +199,37 @@ function gotResults(error, results){
   porcentajeL.position(positionEtiquetas[0], positionEtiquetas[1]+100);
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
+  cargarClasiificacion = true
   }
 }
 
 function cargarCordenadas(){
-let table;
-let newRow;
-table = new p5.Table();
-table.addColumn('lat');
-table.addColumn('lon');
-table.addColumn('img');
-let numRows = datos.getRowCount(); // almacena las filas como datos
-// almacenamos altitud y longitus en una matriz
-lat = datos.getColumn("lat"); // usamos el nombre que figura en al tabla exel CSV
-lon = datos.getColumn("lon"); // usamos el nombre que figura en la tabla exel CSV 
-img = datos.getColumn("img"); // usamos el nombre que figura en al tabla exel CSV
-// ciclo repetitivo que recorra todos los datos desde 0 hasta el valor de menor de filas 
-for (let i = 0; i < numRows; i++) {
-    newRow = table.addRow();
-    newRow.setNum('lat', lat[i]);
-    newRow.setNum('lon', lon[i]);
-    newRow.setString('img', img[i]);
+    if (cargarCordenadas==true and cargarClasiificacion==true){
+        let table;
+        let newRow;
+        table = new p5.Table();
+        table.addColumn('lat');
+        table.addColumn('lon');
+        table.addColumn('img');
+        let numRows = datos.getRowCount(); // almacena las filas como datos
+        // almacenamos altitud y longitus en una matriz
+        lat = datos.getColumn("lat"); // usamos el nombre que figura en al tabla exel CSV
+        lon = datos.getColumn("lon"); // usamos el nombre que figura en la tabla exel CSV 
+        img = datos.getColumn("img"); // usamos el nombre que figura en al tabla exel CSV
+        // ciclo repetitivo que recorra todos los datos desde 0 hasta el valor de menor de filas 
+        for (let i = 0; i < numRows; i++) {
+            newRow = table.addRow();
+            newRow.setNum('lat', lat[i]);
+            newRow.setNum('lon', lon[i]);
+            newRow.setString('img', img[i]);
+  }else{
+    if (cargarClasiificacion==true){
+      window.alert('Para poder cargar tus cordenadas debes activar tu ubicacion en tu dispositivo.')
+    }else{
+      if (cargarCordenadas==true){
+        window.alert('Para poder cargar tus cordenadas debes hacer una clasificacion.')
+    }
+  }
 }
 newRow = table.addRow();
 newRow.setNum('lat', lati);
