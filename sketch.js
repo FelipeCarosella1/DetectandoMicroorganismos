@@ -22,6 +22,7 @@ let imagen;
 let lat;
 let lon;
 let img;
+let imagenClasificacion;
 let cordenadaX;
 let cordenadaY;
 let cargadoCordenadas = false;
@@ -200,6 +201,7 @@ function gotResults(error, results){
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
   cargarClasiificacion = true
+
   }
 }
 
@@ -226,7 +228,7 @@ function cargarCordenadas(){
         newRow = table.addRow();
         newRow.setNum('lat', lati);
         newRow.setNum('lon', long);
-        newRow.setString('img', "agua_enojada.jpg");
+        newRow.setString('img', "contaminada.png");
         saveTable(table, 'cordenadas.csv');
     }else{
     if (cargarClasiificacion==true){

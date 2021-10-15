@@ -23,7 +23,7 @@ function setup() {
 }
 
 function initMap(){
-    const mappa = new Mappa('Leaflet');;
+    const mappa = new Mappa('Leaflet');
     const options = {
     lat: -34.6075682,
     lng: -58.4370894,
