@@ -143,7 +143,7 @@ function setup() {
         console.log(leerDatos())
     };
   boton4 = createButton('Ver Mapa'); // crea boton de captura imagen
-  boton4.position(displayWidth/2-tamañoB-20-10, positionBotonY+100); // posicion del boton
+  boton4.position(displayWidth/2-tamañoB-50-10, positionBotonY+100); // posicion del boton
   boton4.size(tamañoB+50);
   boton4.style("background-color: #F1D7BE");
   boton4.class("btn")
