@@ -233,8 +233,8 @@ function cargarCordenadas(){
             newRow.setNum('lat', lat[i]);
             newRow.setNum('lon', lon[i]);
             newRow.setString('img', img[i]);
-            newRow.setString('fecha',str(fechas[i]);
-            newRow.setString('hora',str(horas[i]);
+            newRow.setString('fecha',str(fechas[i]));
+            newRow.setString('hora',str(horas[i]));
         }
         newRow = table.addRow();
         newRow.setNum('lat', lati);
