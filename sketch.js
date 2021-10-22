@@ -27,6 +27,8 @@ let cordenadaX;
 let cordenadaY;
 let cargadoCordenadas = false;
 let cargarClasiificacion = false;
+let hora;
+let fecha;
 
 
 
@@ -201,7 +203,6 @@ function gotResults(error, results){
   nombreL.style("font-size", "25px");
   porcentajeL.style("font-size", "25px");
   cargarClasiificacion = true
-
   }
 }
 
@@ -209,6 +210,8 @@ function cargarCordenadas(){
     if (cargarCordenadas==true & cargarClasiificacion==true){
         let table;
         let newRow;
+        fecha = day()+"-"+month()+"-"+year();
+        hora =  hour()+":"+minute();
         table = new p5.Table();
         table.addColumn('lat');
         table.addColumn('lon');
@@ -218,17 +221,23 @@ function cargarCordenadas(){
         lat = datos.getColumn("lat"); // usamos el nombre que figura en al tabla exel CSV
         lon = datos.getColumn("lon"); // usamos el nombre que figura en la tabla exel CSV 
         img = datos.getColumn("img"); // usamos el nombre que figura en al tabla exel CSV
+        horas = datos.getColumn("hora"); // usamos el nombre que figura en al tabla exel CSV
+        fechas = datos.getColumn("fecha"); // usamos el nombre que figura en al tabla exel CSV
         // ciclo repetitivo que recorra todos los datos desde 0 hasta el valor de menor de filas 
         for (let i = 0; i < numRows; i++) {
             newRow = table.addRow();
             newRow.setNum('lat', lat[i]);
             newRow.setNum('lon', lon[i]);
             newRow.setString('img', img[i]);
+            newRow.setString('fecha',fechas[i]);
+            newRow.setString('hora',horas[i]);
         }
         newRow = table.addRow();
         newRow.setNum('lat', lati);
         newRow.setNum('lon', long);
         newRow.setString('img', "contaminada.png");
+        newRow.setString('fecha',fecha);
+        newRow.setString('hora',hora);
         saveTable(table, 'cordenadas.csv');
     }else{
     if (cargarClasiificacion==true){
