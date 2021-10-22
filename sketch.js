@@ -218,6 +218,8 @@ function cargarCordenadas(){
         table.addColumn('lat');
         table.addColumn('lon');
         table.addColumn('img');
+        print(fecha)
+        print(hora)
         let numRows = datos.getRowCount(); // almacena las filas como datos
         // almacenamos altitud y longitus en una matriz
         lat = datos.getColumn("lat"); // usamos el nombre que figura en al tabla exel CSV
