@@ -22,6 +22,8 @@ let imagen;
 let lat;
 let lon;
 let img;
+let fechas;
+let horas;
 let imagenClasificacion;
 let cordenadaX;
 let cordenadaY;
