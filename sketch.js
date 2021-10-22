@@ -218,8 +218,6 @@ function cargarCordenadas(){
         table.addColumn('lat');
         table.addColumn('lon');
         table.addColumn('img');
-        print(fecha)
-        print(hora)
         let numRows = datos.getRowCount(); // almacena las filas como datos
         // almacenamos altitud y longitus en una matriz
         lat = datos.getColumn("lat"); // usamos el nombre que figura en al tabla exel CSV
@@ -240,8 +238,10 @@ function cargarCordenadas(){
         newRow.setNum('lat', lati);
         newRow.setNum('lon', long);
         newRow.setString('img', "contaminada.png");
-        newRow.setString('fecha',fecha);
-        newRow.setString('hora',hora);
+        newRow.setString('fecha',str(hora));
+        print(fecha)
+        print(hora)
+        newRow.setString('hora',str(hora));
         saveTable(table, 'cordenadas.csv');
     }else{
     if (cargarClasiificacion==true){
