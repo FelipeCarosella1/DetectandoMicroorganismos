@@ -233,17 +233,15 @@ function cargarCordenadas(){
             newRow.setNum('lat', lat[i]);
             newRow.setNum('lon', lon[i]);
             newRow.setString('img', img[i]);
-            newRow.setNum('fecha',fechas[i]);
-            newRow.setNum('hora',horas[i]);
+            newRow.setString('fecha',str(fechas[i]);
+            newRow.setString('hora',str(horas[i]);
         }
         newRow = table.addRow();
         newRow.setNum('lat', lati);
         newRow.setNum('lon', long);
         newRow.setString('img', "contaminada.png");
-        print(fecha)
-        print(hora)
-        newRow.setNum('fecha',fecha);
-        newRow.setNum('hora',hora);
+        newRow.setString('fecha',str(fecha));
+        newRow.setString('hora',str(hora));
         saveTable(table, 'cordenadas.csv');
     }else{
     if (cargarClasiificacion==true){
