@@ -238,9 +238,9 @@ function cargarCordenadas(){
         newRow.setNum('lat', lati);
         newRow.setNum('lon', long);
         newRow.setString('img', "contaminada.png");
-        newRow.setString('fecha',str(hora));
         print(fecha)
         print(hora)
+        newRow.setString('fecha',str(hora));
         newRow.setString('hora',str(hora));
         saveTable(table, 'cordenadas.csv');
     }else{
