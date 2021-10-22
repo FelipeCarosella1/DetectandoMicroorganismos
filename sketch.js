@@ -240,7 +240,7 @@ function cargarCordenadas(){
         newRow.setString('img', "contaminada.png");
         print(fecha)
         print(hora)
-        newRow.setString('fecha',str(hora));
+        newRow.setString('fecha',str(fecha));
         newRow.setString('hora',str(hora));
         saveTable(table, 'cordenadas.csv');
     }else{
