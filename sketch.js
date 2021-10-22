@@ -212,7 +212,7 @@ function cargarCordenadas(){
     if (cargarCordenadas==true & cargarClasiificacion==true){
         let table;
         let newRow;
-        fecha = day()+"-"+month()+"-"+year();
+        fecha = day()+"/"+month()+"/"+year();
         hora =  hour()+":"+minute();
         table = new p5.Table();
         table.addColumn('lat');
