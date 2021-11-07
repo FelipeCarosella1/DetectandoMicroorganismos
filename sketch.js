@@ -37,7 +37,7 @@ let fecha;
 function preload () {
   // cargamos el link donde se encuentra nuestro modelo pre entrehado por Teachable Machine 
   // model.json contiene la arquitectura del modelo utilizada por la biblioteca TensorFlow.js  
-  clasificador = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/Lq2KkbBYG/' + 'model.json');
+  clasificador = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/y8n73XnCI/'+ 'model.json');
   datos = loadTable("cordenadas.csv", "csv", "header"); // almacenamos los datos en la variable
 }
 
@@ -212,6 +212,11 @@ function cargarCordenadas(){
     if (cargarCordenadas==true & cargarClasiificacion==true){
         let table;
         let newRow;
+        if (nombre == "levadura"){
+          imagen = "levadura.png"
+        }else{
+          imagen = "contaminada.png"
+        }
         fecha = day()+"/"+month()+"/"+year();
         hora =  hour()+":"+minute()+":"+second();
         table = new p5.Table();
@@ -239,7 +244,7 @@ function cargarCordenadas(){
         newRow = table.addRow();
         newRow.setNum('lat', lati);
         newRow.setNum('lon', long);
-        newRow.setString('img', "contaminada.png");
+        newRow.setString('img', imagen);
         newRow.setString('fecha',str(fecha));
         newRow.setString('hora',str(hora));
         saveTable(table, 'cordenadas.csv');
