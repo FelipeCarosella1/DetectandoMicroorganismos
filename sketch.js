@@ -213,7 +213,7 @@ function cargarCordenadas(){
         let table;
         let newRow;
         fecha = day()+"/"+month()+"/"+year();
-        hora =  hour()+":"+minute()":"+second();
+        hora =  hour()+":"+minute()+":"+second();
         table = new p5.Table();
         table.addColumn('lat');
         table.addColumn('lon');
