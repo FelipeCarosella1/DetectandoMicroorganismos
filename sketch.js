@@ -37,7 +37,7 @@ let fecha;
 function preload () {
   // cargamos el link donde se encuentra nuestro modelo pre entrehado por Teachable Machine 
   // model.json contiene la arquitectura del modelo utilizada por la biblioteca TensorFlow.js  
-  clasificador = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/y8n73XnCI/'+ 'model.json');
+  clasificador = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/Mc7tUTI1E/'+ 'model.json');
   datos = loadTable("cordenadas.csv", "csv", "header"); // almacenamos los datos en la variable
 }
 
@@ -212,10 +212,14 @@ function cargarCordenadas(){
     if (cargarCordenadas==true & cargarClasiificacion==true){
         let table;
         let newRow;
-        if (nombre == "levadura"){
+        if (nombre == "Levaduras"){
           imagen = "levadura.png"
         }else{
-          imagen = "contaminada.png"
+          if(nombre == "Microorganismos"){
+            imagen = "contaminada.png"
+          }else{
+            imagen = "limpia.png"
+          }
         }
         fecha = day()+"/"+month()+"/"+year();
         hora =  hour()+":"+minute()+":"+second();
