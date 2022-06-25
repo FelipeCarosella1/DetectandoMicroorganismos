@@ -1,56 +1,61 @@
+<!-- Se carga documento HTML -->
 <!DOCTYPE html>
 <html>
+<!-- Se crea la cabecera del HTML -->
 <head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ClasificadorImagenes</title>
-  <meta name = "description" content="Bienidos a esta pagina, este es un clasificador de imagenes, con el cual podremos identificar si el agua esta limpia, si tiene microrganismos,o si tiene levadura">
-     <!-- color de la tipografia    -->
-  <meta name = "theme-color" content= "#F1D7BE">
+  <meta charset="UTF-8"><!-- Se define la codificacion de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Se define como pagina responsive -->
+  <title>ClasificadorImagenes</title><!-- Titulo de la pagina -->
+  <meta name = "description" content="Bienidos a esta pagina, este es un clasificador de imagenes, con el cual podremos identificar si el agua esta limpia, si tiene microrganismos,o si tiene levadura"><!-- descripcion de la pagina -->
+  <meta name = "theme-color" content= "#F1D7BE"><!-- color de la tipografia -->
   <!-- bloque para mejor visualizacion en dispositivos mobiles -->
   <meta name = "MobileOptimized" content = "width">
   <meta name = "HandheldFriendly" content = "true">
   <meta name = "apple-mobile-web-app-capable" content = "yes">
   <meta name = "apple-mobile-web-app-status-bar-style" content = "black-translucent">
-  <!-- carga del icono para la WPA -->
+  <!-- carga del icono para la PWA -->
   <link rel = "shortcut icon" type = "image/png" href = "./icon.png">
   <link rel = "apple-touch-icon" href = "./icon.png">
   <link rel = "apple-touch-startup-image" href="./icon.png">
   <!--Archivo manifest.json que se utiliza para crear una PWA-->
   <link rel="manifest" href="./manifest.json">  
-
-    <script src="./p5.min.js"></script>
-    <script src="./p5.dom.min.js"></script>
-    <script src="./p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <!-- libreria ML5 -->
-    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  <script src="./p5.min.js"></script>
+  <script src="./p5.dom.min.js"></script>
+  <script src="./p5.sound.min.js"></script>
+  <!-- Se carga archivo de estilo CSS -->
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <!-- Se carga libreria bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- libreria ML5 -->
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 </head>
+<!-- Se crea el cuerpo del HTML -->
 <body>
   <!--  carga el service worker  -->
   <script src="./script.js"></script>
+  <!-- Se carga el sketch que se ejecutara en la pagina -->
   <script src="./sketch.js"></script>
-  <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #F1D7BE;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="./index.html">Más agua limpia más vida</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" id="tocar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+  <!-- Se crea barra de navegacion -->
+  <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #F1D7BE;"><!-- Se le pone color y estilo a la barra de navegacion -->
+  <div class="container-fluid"><!-- se crea un div agrupar titulo y un boton si es un dispositivo movil en la barra de navegacion -->
+    <a class="navbar-brand" href="./index.html">Más agua limpia más vida</a><!-- Titulo de barra de navegacion -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" id="tocar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><!-- Boton para desplegar barra de navegacion en dispositivos moviles -->
+      <span class="navbar-toggler-icon"></span><!-- Se crea contenedor en linea -->
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="./index.html">Clasificar</a>
+    <div class="collapse navbar-collapse" id="navbarNav"><!-- se crea un div de las etiquetas con sus links que estaran en la barra de navegacion -->
+      <!-- Se crea lista de etiquetas con links-->
+      <ul class="navbar-nav"><!-- Se crea la lista -->
+        <li class="nav-item"><!-- Se crea un elemento de la lista -->
+          <a class="nav-link active" aria-current="page" href="./index.html">Clasificar</a><!-- Se crea la etiqueta con un link y se lo marca como activo -->
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./index1.html">Mapa</a>
+        <li class="nav-item"><!-- Se crea un elemento de la lista -->
+          <a class="nav-link" href="./index1.html">Mapa</a><!-- Se crea la etiqueta con un link -->
         </li>
       </ul>
     </div>
   </div>
   </nav>
+  <!-- Se carga script bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>
